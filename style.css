@@ -38,3 +38,176 @@
 
   transform: translateY(-2px);
 }
+
+
+
+/* =====================================================
+   ΚΕΝΤΡΑΡΙΣΜΑ ΦΕΤΙΝΗΣ ΠΑΡΑΣΤΑΣΗΣ
+   ===================================================== */
+
+.hero {
+  position: relative;
+  min-height: 92vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+  padding: 120px 30px 80px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Μικρός τίτλος */
+
+.hero-school {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* ΘΕΑΤΡΙΚΗ ΟΜΑΔΑ */
+
+.hero-label {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* ΦΕΤΙΝΗ ΠΑΡΑΣΤΑΣΗ */
+
+.hero h1 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ΤΙΤΛΟΣ ΕΡΓΟΥ */
+
+.hero-title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ΣΥΓΓΡΑΦΕΑΣ */
+
+.hero-author {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ΓΡΑΜΜΗ */
+
+.hero-divider {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ΗΜΕΡΟΜΗΝΙΕΣ + ΩΡΑ */
+
+.hero-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Κάθε πληροφορία */
+
+.hero-details > div {
+  text-align: center;
+}
+
+/* ΚΟΥΜΠΙ */
+
+.hero-button {
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  background: transparent !important;
+  color: #ffffff !important;
+
+  border: 1px solid rgba(255,255,255,0.75) !important;
+}
+
+.hero-button:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+
+/* =====================================================
+   ΚΙΝΗΤΟ
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-content {
+    padding:
+      110px
+      20px
+      70px;
+  }
+
+  .hero-school {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .hero-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .hero h1 {
+    text-align: center;
+  }
+
+  .hero-title {
+    text-align: center;
+  }
+
+  .hero-author {
+    text-align: center;
+  }
+
+  .hero-details {
+    width: 100%;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .hero-details > div {
+    width: 100%;
+  }
+
+  .hero-button {
+    margin-top: 10px;
+  }
+
+}
