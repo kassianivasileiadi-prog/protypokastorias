@@ -1,389 +1,22 @@
 <!DOCTYPE html>
-
 <html lang="el">
 
 <head>
 
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Κράτηση Θέσεων</title>
+  <meta
+    name="description"
+    content="Θεατρική ομάδα 1ου Πρότυπου Λυκείου Καστοριάς"
+  >
 
+  <title>
+    1ο Πρότυπο Λύκειο Καστοριάς | Θέατρο
+  </title>
 
-<style>
-
-* {
-  box-sizing: border-box;
-}
-
-
-body {
-
-  margin: 0;
-
-  min-height: 100vh;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  background: #ffffff;
-
-  color: #222;
-
-  padding: 35px 15px;
-
-}
-
-
-.page {
-
-  width: 100%;
-
-  max-width: 560px;
-
-  margin: 0 auto;
-
-}
-
-
-/* =========================
-   LOGO
-   ========================= */
-
-.header {
-
-  text-align: center;
-
-  margin-bottom: 25px;
-
-}
-
-
-.logo {
-
-  display: block;
-
-  width: auto;
-
-  max-width: 330px;
-
-  max-height: 170px;
-
-  margin: 0 auto 12px auto;
-
-  object-fit: contain;
-
-}
-
-
-.header-line {
-
-  width: 70px;
-
-  height: 2px;
-
-  background: #555;
-
-  margin: 17px auto 0 auto;
-
-}
-
-
-/* =========================
-   CARD
-   ========================= */
-
-.card {
-
-  background: #f2f2f0;
-
-  border: 1px solid #dededb;
-
-  border-radius: 5px;
-
-  padding: 35px;
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.08);
-
-}
-
-
-/* =========================
-   TITLE
-   ========================= */
-
-h1 {
-
-  text-align: center;
-
-  font-size: 28px;
-
-  font-weight: normal;
-
-  margin: 0 0 8px 0;
-
-  color: #222;
-
-}
-
-
-.subtitle {
-
-  text-align: center;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 13px;
-
-  color: #777;
-
-  margin-bottom: 30px;
-
-}
-
-
-/* =========================
-   FORM
-   ========================= */
-
-.form-group {
-
-  margin-bottom: 21px;
-
-}
-
-
-label {
-
-  display: block;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 12px;
-
-  font-weight: bold;
-
-  letter-spacing: 0.7px;
-
-  text-transform: uppercase;
-
-  color: #444;
-
-  margin-bottom: 8px;
-
-}
-
-
-input,
-select {
-
-  width: 100%;
-
-  height: 48px;
-
-  padding: 0 14px;
-
-  border: 1px solid #cfcfcb;
-
-  border-radius: 3px;
-
-  background: #ffffff;
-
-  color: #222;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 14px;
-
-  outline: none;
-
-}
-
-
-input:focus,
-select:focus {
-
-  border-color: #555;
-
-  box-shadow:
-    0 0 0 2px rgba(0,0,0,0.05);
-
-}
-
-
-input::placeholder {
-
-  color: #aaa;
-
-}
-
-
-.availability-note {
-
-  font-family: Arial, sans-serif;
-
-  font-size: 12px;
-
-  color: #888;
-
-  margin-top: 7px;
-
-}
-
-
-/* =========================
-   BUTTON
-   ========================= */
-
-button {
-
-  width: 100%;
-
-  height: 52px;
-
-  margin-top: 5px;
-
-  border: 1px solid #222;
-
-  border-radius: 3px;
-
-  background: #222;
-
-  color: white;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 14px;
-
-  font-weight: bold;
-
-  letter-spacing: 0.8px;
-
-  cursor: pointer;
-
-}
-
-
-button:disabled {
-
-  background: #b8b8b5;
-
-  border-color: #b8b8b5;
-
-  cursor: not-allowed;
-
-}
-
-
-/* =========================
-   MESSAGE
-   ========================= */
-
-#message {
-
-  margin-top: 20px;
-
-  padding: 15px;
-
-  display: none;
-
-  text-align: center;
-
-  border-radius: 3px;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 13px;
-
-  line-height: 1.5;
-
-}
-
-
-.success {
-
-  background: #f0f5f0;
-
-  color: #315b35;
-
-  border: 1px solid #c9d8c9;
-
-}
-
-
-.error {
-
-  background: #f8eeee;
-
-  color: #7b3030;
-
-  border: 1px solid #e2c4c4;
-
-}
-
-
-/* =========================
-   FOOTER
-   ========================= */
-
-.footer {
-
-  text-align: center;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 11px;
-
-  color: #888;
-
-  margin-top: 18px;
-
-}
-
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 600px) {
-
-  body {
-
-    padding: 20px 12px;
-
-  }
-
-
-  .logo {
-
-    max-width: 280px;
-
-    max-height: 140px;
-
-  }
-
-
-  .card {
-
-    padding: 27px 20px 25px 20px;
-
-  }
-
-
-  h1 {
-
-    font-size: 24px;
-
-  }
-
-}
-
-</style>
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -391,782 +24,781 @@ button:disabled {
 <body>
 
 
-<div class="page">
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
+
+<header class="navbar">
+
+  <div class="nav-container">
 
 
-  <div class="header">
+    <!-- LOGO -->
 
-    <!--
-    ΒΑΛΕ ΕΔΩ ΤΟ LINK ΤΟΥ LOGO ΣΟΥ
+    <a href="index.html" class="logo-link">
 
-    Παράδειγμα:
+      <img
+        src="images/logo.png"
+        alt="1ο Πρότυπο Λύκειο Καστοριάς"
+        class="logo"
+      >
 
-    <img class="logo"
-         src="https://...."
-         alt="1ο Πρότυπο Λύκειο Καστοριάς">
-    -->
+    </a>
 
-    <div class="header-line"></div>
+
+    <!-- MENU -->
+
+    <nav class="nav-menu">
+
+      <a href="#home">
+        Αρχική
+      </a>
+
+      <a href="#about">
+        Η ομάδα μας
+      </a>
+
+      <a href="#performances">
+        Παραστάσεις
+      </a>
+
+      <a href="#memories">
+        Αναμνήσεις
+      </a>
+
+      <a href="#location">
+        Τοποθεσία
+      </a>
+
+      <a href="#contact">
+        Επικοινωνία
+      </a>
+
+    </nav>
+
+
+    <!-- BOOKING BUTTON -->
+
+    <a
+      href="#booking"
+      class="nav-button"
+    >
+      ΚΡΑΤΗΣΗ ΘΕΣΗΣ
+    </a>
+
 
   </div>
 
+</header>
 
-  <div class="card">
+
+
+<!-- =====================================================
+     MAIN
+     ===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section
+  class="hero"
+  id="home"
+>
+
+
+  <div class="hero-overlay"></div>
+
+
+  <div class="hero-content">
+
+
+    <p class="hero-small">
+      1ο ΠΡΟΤΥΠΟ ΛΥΚΕΙΟ ΚΑΣΤΟΡΙΑΣ
+    </p>
 
 
     <h1>
-      Κράτηση Θέσεων
+
+      Ο ΜΠΑΜΠΑΣ<br>
+      Ο ΠΟΛΕΜΟΣ
+
     </h1>
 
 
-    <div class="subtitle">
-      Παρακαλούμε συμπληρώστε τα στοιχεία σας
+    <p class="hero-author">
+
+      Ιάκωβος Καμπανέλλης
+
+    </p>
+
+
+    <div class="hero-line"></div>
+
+
+    <!-- DATES -->
+
+    <div class="hero-date">
+
+
+      <span>
+        24
+      </span>
+
+
+      <span>
+        25
+      </span>
+
+
+      <span>
+        26
+      </span>
+
+
+      <small>
+        ΙΟΥΝΙΟΥ
+      </small>
+
+
+      <strong>
+        21:30
+      </strong>
+
+
     </div>
 
 
-    <form id="bookingForm">
+    <!-- BOOKING -->
 
+    <a
+      href="#booking"
+      class="hero-button"
+    >
 
-      <!-- ΗΜΕΡΟΜΗΝΙΑ -->
+      🎟 ΚΡΑΤΗΣΗ ΘΕΣΗΣ
 
-      <div class="form-group">
-
-        <label for="dateSelect">
-          Ημερομηνία Παράστασης
-        </label>
-
-
-        <select
-          id="dateSelect"
-          required
-        >
-
-          <option value="">
-            Φόρτωση ημερομηνιών...
-          </option>
-
-        </select>
-
-
-        <div class="availability-note">
-          Επιλέξτε την ημερομηνία που επιθυμείτε.
-        </div>
-
-      </div>
-
-
-      <!-- ΟΝΟΜΑ -->
-
-      <div class="form-group">
-
-        <label for="name">
-          Ονοματεπώνυμο
-        </label>
-
-
-        <input
-          type="text"
-          id="name"
-          required
-          placeholder="π.χ. Μαρία Παπαδοπούλου"
-        >
-
-      </div>
-
-
-      <!-- EMAIL -->
-
-      <div class="form-group">
-
-        <label for="email">
-          Email
-        </label>
-
-
-        <input
-          type="email"
-          id="email"
-          required
-          placeholder="π.χ. example@gmail.com"
-        >
-
-      </div>
-
-
-      <!-- ΘΕΣΕΙΣ -->
-
-      <div class="form-group">
-
-        <label for="seats">
-          Αριθμός Θέσεων
-        </label>
-
-
-        <input
-          type="number"
-          id="seats"
-          min="1"
-          max="10"
-          value="1"
-          required
-        >
-
-      </div>
-
-
-      <button
-        type="submit"
-        id="submitBtn"
-        disabled
-      >
-        ΥΠΟΒΟΛΗ ΚΡΑΤΗΣΗΣ
-      </button>
-
-
-    </form>
-
-
-    <div id="message"></div>
+    </a>
 
 
   </div>
 
 
-  <div class="footer">
+  <div class="scroll-down">
+    ↓
+  </div>
 
-    Θεατρική Παράσταση •
-    1ο Πρότυπο Λύκειο Καστοριάς
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+     ===================================================== -->
+
+<section
+  class="section about"
+  id="about"
+>
+
+
+  <div class="section-inner">
+
+
+    <p class="section-label">
+      ΤΟ ΘΕΑΤΡΟ ΜΑΣ
+    </p>
+
+
+    <h2>
+
+      Ιστορίες που<br>
+      μένουν στη μνήμη.
+
+    </h2>
+
+
+    <div class="about-text">
+
+
+      <p>
+
+        Η θεατρική ομάδα του
+        1ου Πρότυπου Λυκείου Καστοριάς
+        δημιουργεί, συνεργάζεται και
+        παρουσιάζει θεατρικές παραστάσεις
+        μέσα από τη ματιά των μαθητών
+        και των εκπαιδευτικών τους.
+
+      </p>
+
+
+      <p>
+
+        Κάθε παράσταση είναι μια
+        ξεχωριστή εμπειρία, γεμάτη
+        δημιουργία, συνεργασία και
+        αναμνήσεις.
+
+      </p>
+
+
+    </div>
+
 
   </div>
 
 
-</div>
+</section>
 
 
-<script>
 
+<!-- =====================================================
+     FEATURED PERFORMANCE
+     ===================================================== -->
 
-// =====================================================
-// ELEMENTS
-// =====================================================
+<section class="featured-performance">
 
-const dateSelect =
-  document.getElementById(
-    "dateSelect"
-  );
 
-const submitBtn =
-  document.getElementById(
-    "submitBtn"
-  );
+  <!-- IMAGE -->
 
-const bookingForm =
-  document.getElementById(
-    "bookingForm"
-  );
+  <div class="featured-image">
 
-const messageDiv =
-  document.getElementById(
-    "message"
-  );
 
-const seatsInput =
-  document.getElementById(
-    "seats"
-  );
+    <img
+      src="images/hero.jpg"
+      alt="Ο Μπαμπάς ο Πόλεμος"
+    >
 
-const nameInput =
-  document.getElementById(
-    "name"
-  );
 
-const emailInput =
-  document.getElementById(
-    "email"
-  );
+  </div>
 
 
-let availableSeatsByDate = {};
 
-let bookingInProgress = false;
+  <!-- TEXT -->
 
+  <div class="featured-content">
 
-// =====================================================
-// MESSAGE
-// =====================================================
 
-function showMessage(
-  message,
-  type
-) {
+    <p class="section-label">
+      ΦΕΤΙΝΗ ΠΑΡΑΣΤΑΣΗ
+    </p>
 
-  messageDiv.textContent =
-    message;
 
-  messageDiv.className =
-    type;
+    <h2>
 
-  messageDiv.style.display =
-    "block";
+      Ο Μπαμπάς<br>
+      ο Πόλεμος
 
-}
+    </h2>
 
 
-function hideMessage() {
+    <p class="featured-author">
 
-  messageDiv.style.display =
-    "none";
+      Ιάκωβος Καμπανέλλης
 
-}
+    </p>
 
 
-// =====================================================
-// LOAD DATES
-// =====================================================
+    <p class="featured-description">
 
-function loadDates() {
+      Μια θεατρική παράσταση
+      από τη θεατρική ομάδα του
+      1ου Πρότυπου Λυκείου Καστοριάς.
 
-  dateSelect.innerHTML =
-    '<option value="">Φόρτωση ημερομηνιών...</option>';
+    </p>
 
-  submitBtn.disabled = true;
 
-  hideMessage();
 
+    <!-- INFORMATION -->
 
-  google.script.run
+    <div class="performance-info">
 
-    .withSuccessHandler(
-      function(data) {
 
-        console.log(
-          "ΗΜΕΡΟΜΗΝΙΕΣ:",
-          data
-        );
+      <div>
 
-        renderDates(
-          data
-        );
+        <span>
+          ΗΜΕΡΟΜΗΝΙΕΣ
+        </span>
 
-      }
-    )
+        <strong>
+          24 • 25 • 26 Ιουνίου
+        </strong>
 
-    .withFailureHandler(
-      function(error) {
+      </div>
 
-        console.error(
-          error
-        );
 
-        dateSelect.innerHTML =
-          '<option value="">Αποτυχία φόρτωσης</option>';
+      <div>
 
-        showMessage(
-          "Δεν ήταν δυνατή η φόρτωση των ημερομηνιών.",
-          "error"
-        );
+        <span>
+          ΩΡΑ
+        </span>
 
-      }
-    )
+        <strong>
+          21:30
+        </strong>
 
-    .getAvailableDatesData();
+      </div>
 
-}
 
+    </div>
 
-// =====================================================
-// RENDER DATES
-// =====================================================
 
-function renderDates(
-  dates
-) {
 
-  dateSelect.innerHTML =
-    '<option value="">-- Επιλέξτε ημερομηνία --</option>';
+    <!-- DETAILS BUTTON -->
 
-  availableSeatsByDate = {};
+    <a
+      href="parastaseis/o-mpampas-o-polemos.html"
+      class="dark-button"
+    >
 
-  let hasAvailable = false;
+      ΠΕΡΙΣΣΟΤΕΡΑ ΓΙΑ ΤΗΝ ΠΑΡΑΣΤΑΣΗ
 
+    </a>
 
-  if (
-    !Array.isArray(dates)
-  ) {
 
-    showMessage(
-      "Το σύστημα επέστρεψε μη έγκυρα δεδομένα.",
-      "error"
-    );
+  </div>
 
-    return;
 
-  }
+</section>
 
 
-  dates.forEach(
-    function(item) {
 
-      const date =
-        String(
-          item.dateName
-        ).trim();
+<!-- =====================================================
+     PERFORMANCES
+     ===================================================== -->
 
-      const available =
-        Number(
-          item.availableSeats
-        ) || 0;
+<section
+  class="section performances"
+  id="performances"
+>
 
 
-      availableSeatsByDate[date] =
-        available;
+  <div class="section-heading">
 
 
-      const option =
-        document.createElement(
-          "option"
-        );
+    <p class="section-label">
+      ΤΟ ΑΡΧΕΙΟ ΜΑΣ
+    </p>
 
 
-      option.value =
-        date;
+    <h2>
+      Οι παραστάσεις μας
+    </h2>
 
 
-      const parts =
-        date.split("-");
+    <p>
 
+      Ανακαλύψτε τις παραστάσεις,
+      τους ανθρώπους και τις
+      αναμνήσεις τους.
 
-      let displayDate =
-        date;
+    </p>
 
 
-      if (
-        parts.length === 3
-      ) {
+  </div>
 
-        displayDate =
-          parts[2] +
-          "/" +
-          parts[1] +
-          "/" +
-          parts[0];
 
-      }
 
+  <div class="performance-grid">
 
-      if (
-        available > 0
-      ) {
 
-        option.textContent =
-          displayDate +
-          " — " +
-          available +
-          " διαθέσιμες θέσεις";
+    <!-- =================================================
+         CURRENT PERFORMANCE
+         ================================================= -->
 
-        hasAvailable = true;
+    <article class="performance-card">
 
-      } else {
 
-        option.textContent =
-          displayDate +
-          " — ΕΞΑΝΤΛΗΘΗΚΕ";
+      <div class="card-image">
 
-        option.disabled =
-          true;
 
-      }
+        <img
+          src="images/hero.jpg"
+          alt="Ο Μπαμπάς ο Πόλεμος"
+        >
 
 
-      dateSelect.appendChild(
-        option
-      );
+      </div>
 
-    }
-  );
 
 
-  submitBtn.disabled =
-    !hasAvailable;
+      <div class="card-content">
 
 
-  if (
-    !hasAvailable
-  ) {
+        <p>
+          2026
+        </p>
 
-    showMessage(
-      "Δεν υπάρχουν διαθέσιμες θέσεις.",
-      "error"
-    );
 
-  }
+        <h3>
+          Ο Μπαμπάς ο Πόλεμος
+        </h3>
 
-}
 
+        <a
+          href="parastaseis/o-mpampas-o-polemos.html"
+        >
 
-// =====================================================
-// DATE CHANGE
-// =====================================================
+          ΔΕΙΤΕ ΤΗΝ ΠΑΡΑΣΤΑΣΗ →
 
-dateSelect.addEventListener(
-  "change",
-  function() {
+        </a>
 
-    hideMessage();
 
+      </div>
 
-    const selectedDate =
-      dateSelect.value;
 
+    </article>
 
-    if (
-      !selectedDate
-    ) {
 
-      submitBtn.disabled =
-        true;
 
-      seatsInput.max =
-        10;
+    <!-- =================================================
+         FUTURE PERFORMANCE
+         ================================================= -->
 
-      return;
+    <article
+      class="performance-card empty-card"
+    >
 
-    }
 
+      <div class="empty-content">
 
-    const available =
-      availableSeatsByDate[
-        selectedDate
-      ] || 0;
 
+        <span>
+          +
+        </span>
 
-    seatsInput.max =
-      Math.min(
-        available,
-        10
-      );
 
+        <h3>
+          Επόμενη παράσταση
+        </h3>
 
-    if (
-      Number(
-        seatsInput.value
-      ) > available
-    ) {
 
-      seatsInput.value =
-        1;
+        <p>
+          Σύντομα κοντά σας.
+        </p>
 
-    }
 
+      </div>
 
-    submitBtn.disabled =
-      available <= 0;
 
-  }
-);
+    </article>
 
 
-// =====================================================
-// SEATS CHECK
-// =====================================================
+  </div>
 
-seatsInput.addEventListener(
-  "input",
-  function() {
 
-    const selectedDate =
-      dateSelect.value;
+</section>
 
 
-    if (
-      !selectedDate
-    ) {
 
-      return;
+<!-- =====================================================
+     MEMORIES
+     ===================================================== -->
 
-    }
+<section
+  class="memories"
+  id="memories"
+>
 
 
-    const available =
-      availableSeatsByDate[
-        selectedDate
-      ] || 0;
+  <div class="memories-overlay"></div>
 
 
-    const requested =
-      parseInt(
-        seatsInput.value,
-        10
-      ) || 0;
+  <div class="memories-content">
 
 
-    if (
-      requested > available
-    ) {
+    <p class="section-label">
+      ΑΝΑΜΝΗΣΕΙΣ
+    </p>
 
-      showMessage(
 
-        "Δεν υπάρχουν αρκετές διαθέσιμες θέσεις. Απομένουν μόνο " +
-        available +
-        " θέσεις.",
+    <h2>
 
-        "error"
+      Οι στιγμές<br>
+      που έμειναν.
 
-      );
+    </h2>
 
-    } else {
 
-      hideMessage();
+    <p>
 
-    }
+      Φωτογραφίες, βίντεο και στιγμές
+      από τις παραστάσεις μας.
 
-  }
-);
+    </p>
 
 
-// =====================================================
-// SUBMIT
-// =====================================================
 
-bookingForm.addEventListener(
-  "submit",
-  function(e) {
+    <!-- VIDEO PLACEHOLDER -->
 
-    e.preventDefault();
+    <div class="video-placeholder">
 
 
-    if (
-      bookingInProgress
-    ) {
+      <span>
+        ▶
+      </span>
 
-      return;
 
-    }
+      <p>
+        Βίντεο αναμνήσεων
+      </p>
 
 
-    const dateName =
-      dateSelect.value.trim();
+    </div>
 
 
-    const name =
-      nameInput.value.trim();
+  </div>
 
 
-    const email =
-      emailInput.value.trim();
+</section>
 
 
-    const seats =
-      parseInt(
-        seatsInput.value,
-        10
-      );
 
+<!-- =====================================================
+     LOCATION
+     ===================================================== -->
 
-    if (
-      !dateName ||
-      !name ||
-      !email ||
-      !seats ||
-      seats <= 0
-    ) {
+<section
+  class="section location"
+  id="location"
+>
 
-      showMessage(
-        "Παρακαλώ συμπληρώστε όλα τα πεδία.",
-        "error"
-      );
 
-      return;
+  <div class="section-heading">
 
-    }
 
+    <p class="section-label">
+      ΤΟΠΟΘΕΣΙΑ
+    </p>
 
-    const available =
-      availableSeatsByDate[
-        dateName
-      ] || 0;
 
+    <h2>
+      Πού θα μας βρείτε
+    </h2>
 
-    if (
-      seats > available
-    ) {
 
-      showMessage(
+    <p>
 
-        available > 0
+      Εδώ θα τοποθετήσουμε τον
+      χάρτη της παράστασης.
 
-          ? "Δεν υπάρχουν αρκετές διαθέσιμες θέσεις. Απομένουν μόνο " +
-            available +
-            " θέσεις."
+    </p>
 
-          : "Η παράσταση για αυτή την ημερομηνία έχει εξαντληθεί.",
 
-        "error"
+  </div>
 
-      );
 
-      return;
 
-    }
+  <!-- MAP -->
 
+  <div class="map-container">
 
-    // -----------------------------------------------
-    // LOCK
-    // -----------------------------------------------
 
-    bookingInProgress =
-      true;
+    <div class="map-placeholder">
 
-    submitBtn.disabled =
-      true;
 
-    submitBtn.textContent =
-      "ΑΠΟΣΤΟΛΗ ΚΡΑΤΗΣΗΣ...";
+      <span>
+        📍
+      </span>
 
-    hideMessage();
 
+      <p>
+        Χάρτης τοποθεσίας
+      </p>
 
-    // -----------------------------------------------
-    // ΑΠΟΣΤΟΛΗ ΣΤΟ APPS SCRIPT
-    // -----------------------------------------------
 
-    google.script.run
+    </div>
 
-      .withSuccessHandler(
-        function(result) {
 
-          console.log(
-            "ΑΠΑΝΤΗΣΗ:",
-            result
-          );
+  </div>
 
 
-          bookingInProgress =
-            false;
+</section>
 
 
-          if (
-            result &&
-            result.success === true
-          ) {
 
-            showMessage(
-              "✓ " +
-              result.message,
-              "success"
-            );
+<!-- =====================================================
+     BOOKING
+     ===================================================== -->
 
+<section
+  class="booking"
+  id="booking"
+>
 
-            bookingForm.reset();
 
+  <div class="booking-content">
 
-            seatsInput.value =
-              1;
 
-            seatsInput.max =
-              10;
+    <p class="section-label">
+      ΚΡΑΤΗΣΕΙΣ
+    </p>
 
 
-            submitBtn.disabled =
-              true;
+    <h2>
+      Κλείστε τη θέση σας
+    </h2>
 
-            submitBtn.textContent =
-              "ΥΠΟΒΟΛΗ ΚΡΑΤΗΣΗΣ";
 
+    <p>
 
-            // Ξαναφόρτωση θέσεων
+      Εξασφαλίστε τη θέση σας
+      στην παράσταση.
 
-            setTimeout(
-              function() {
+    </p>
 
-                loadDates();
 
-              },
-              500
-            );
 
+    <!--
+      ΕΔΩ ΕΙΝΑΙ ΤΟ LINK ΤΗΣ ΦΟΡΜΑΣ
+      ΠΟΥ ΕΧΟΥΜΕ ΗΔΗ ΦΤΙΑΞΕΙ
+    -->
 
-          } else {
+    <a
+      href="https://kassianivasileiadi-prog.github.io/Theatro/theater.html"
+      class="booking-button"
+    >
 
-            submitBtn.disabled =
-              false;
+      🎟 ΚΡΑΤΗΣΗ ΘΕΣΗΣ
 
-            submitBtn.textContent =
-              "ΥΠΟΒΟΛΗ ΚΡΑΤΗΣΗΣ";
+    </a>
 
 
-            showMessage(
+  </div>
 
-              result &&
-              result.message
 
-                ? result.message
+</section>
 
-                : "Η κράτηση δεν ολοκληρώθηκε.",
 
-              "error"
 
-            );
+<!-- =====================================================
+     CONTACT
+     ===================================================== -->
 
-          }
+<section
+  class="section contact"
+  id="contact"
+>
 
-        }
-      )
 
-      .withFailureHandler(
-        function(error) {
+  <div class="section-heading">
 
-          console.error(
-            error
-          );
 
+    <p class="section-label">
+      ΕΠΙΚΟΙΝΩΝΙΑ
+    </p>
 
-          bookingInProgress =
-            false;
 
+    <h2>
 
-          submitBtn.disabled =
-            false;
+      Επικοινωνήστε<br>
+      μαζί μας
 
-          submitBtn.textContent =
-            "ΥΠΟΒΟΛΗ ΚΡΑΤΗΣΗΣ";
+    </h2>
 
 
-          showMessage(
-            "Δεν ήταν δυνατή η επικοινωνία με το σύστημα.",
-            "error"
-          );
+  </div>
 
-        }
-      )
 
-      .processBooking({
 
-        dateName:
-          dateName,
+  <div class="contact-grid">
 
-        name:
-          name,
 
-        email:
-          email,
+    <!-- EMAIL -->
 
-        seats:
-          seats
+    <div>
 
-      });
 
-  }
-);
+      <span>
+        EMAIL
+      </span>
 
 
-// =====================================================
-// START
-// =====================================================
+      <p>
+        Θα το προσθέσουμε εδώ.
+      </p>
 
-loadDates();
 
-</script>
+    </div>
+
+
+
+    <!-- PHONE -->
+
+    <div>
+
+
+      <span>
+        ΤΗΛΕΦΩΝΟ
+      </span>
+
+
+      <p>
+        Θα το προσθέσουμε εδώ.
+      </p>
+
+
+    </div>
+
+
+
+    <!-- LOCATION -->
+
+    <div>
+
+
+      <span>
+        ΤΟΠΟΘΕΣΙΑ
+      </span>
+
+
+      <p>
+        Καστοριά
+      </p>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+
+  <div class="footer-logo">
+
+    1ο ΠΡΟΤΥΠΟ<br>
+    ΛΥΚΕΙΟ ΚΑΣΤΟΡΙΑΣ
+
+  </div>
+
+
+  <p>
+
+    © 2026 1ο Πρότυπο Λύκειο Καστοριάς
+
+  </p>
+
+
+</footer>
+
 
 
 </body>
