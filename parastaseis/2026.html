@@ -1,284 +1,426 @@
-
+```html
 <!DOCTYPE html>
 <html lang="el">
 
 <head>
+
   <meta charset="UTF-8">
 
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>Το ημέρωμα της στρίγγλας | Θεατρική Ομάδα</title>
+  <title>Το ημέρωμα της στρίγγλας | 2026</title>
 
   <link rel="stylesheet"
         href="../style.css">
 
   <style>
 
-    /* =========================================
-       PAGE
-       ========================================= */
+    /* ==================================================
+       ΒΑΣΙΚΑ
+       ================================================== */
 
-    .play-page {
-      background: #0d0d0d;
-      min-height: 100vh;
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #0b0b0b;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
 
-    /* =========================================
-       TOP
-       ========================================= */
+    /* ==================================================
+       HERO
+       ================================================== */
 
     .play-hero {
+
       min-height: 90vh;
-
-      display: flex;
-      align-items: center;
-
-      padding: 120px 8% 80px;
 
       position: relative;
 
+      display: flex;
+
+      align-items: flex-end;
+
       overflow: hidden;
+
+      background: #111;
     }
 
-    .play-hero-background {
+
+    .play-hero-bg {
+
       position: absolute;
+
       inset: 0;
 
-      background:
+      background-image:
+
         linear-gradient(
-          90deg,
-          rgba(0,0,0,0.95),
-          rgba(0,0,0,0.65),
+          to right,
+          rgba(0,0,0,0.92),
+          rgba(0,0,0,0.55),
           rgba(0,0,0,0.25)
         ),
+
         url("../images/2026.jpg");
 
       background-size: cover;
+
       background-position: center;
 
-      filter: blur(2px);
+      filter: blur(1px);
 
       transform: scale(1.03);
     }
 
+
     .play-hero-content {
+
       position: relative;
+
       z-index: 2;
 
-      max-width: 750px;
+      width: 100%;
+
+      padding: 100px 7% 80px;
+
+      max-width: 1000px;
     }
+
 
     .back-link {
+
       display: inline-block;
 
-      margin-bottom: 40px;
+      margin-bottom: 45px;
 
-      font-size: 13px;
+      font-size: 14px;
 
-      color: #ccc;
+      color: #cccccc;
 
-      border-bottom: 1px solid #777;
-
-      padding-bottom: 5px;
+      transition: 0.3s;
     }
+
 
     .back-link:hover {
       color: white;
-
-      border-color: white;
     }
 
+
     .play-year {
-      font-size: 12px;
 
-      letter-spacing: 4px;
+      font-size: 13px;
 
-      color: #aaa;
+      letter-spacing: 5px;
+
+      color: #aaaaaa;
 
       margin-bottom: 18px;
     }
 
-    .play-title {
-      font-size: clamp(50px, 8vw, 100px);
 
-      line-height: 0.92;
+    .play-title {
+
+      font-size: clamp(
+        50px,
+        8vw,
+        105px
+      );
+
+      line-height: 0.9;
 
       letter-spacing: -4px;
 
-      margin-bottom: 25px;
+      margin: 0 0 25px;
+
+      max-width: 900px;
     }
+
 
     .play-author {
-      font-size: 21px;
 
-      color: #ccc;
+      font-size: 22px;
+
+      color: #cccccc;
     }
 
 
-    /* =========================================
-       INTRO
-       ========================================= */
+    /* ==================================================
+       ΚΟΙΝΗ ΕΝΟΤΗΤΑ
+       ================================================== */
 
-    .play-intro {
-      max-width: 900px;
-
-      margin: auto;
-
-      padding: 110px 25px;
-    }
-
-    .play-intro h2 {
-      font-size: 50px;
-
-      margin-bottom: 25px;
-    }
-
-    .play-intro p {
-      color: #bbb;
-
-      font-size: 18px;
-
-      line-height: 1.8;
-    }
-
-
-    /* =========================================
-       CONTRIBUTORS
-       ========================================= */
-
-    .contributors {
-      background: #151515;
+    .section {
 
       padding: 110px 7%;
     }
 
-    .contributors-container {
+
+    .section-inner {
+
       max-width: 1200px;
 
       margin: auto;
     }
 
-    .contributors h2,
-    .actors h2,
-    .memories-page h2 {
-      font-size: 55px;
+
+    .section-label {
+
+      font-size: 11px;
+
+      letter-spacing: 4px;
+
+      color: #888;
+
+      margin-bottom: 18px;
+    }
+
+
+    .section-title {
+
+      font-size: clamp(
+        40px,
+        5vw,
+        65px
+      );
 
       line-height: 1;
 
-      margin-bottom: 50px;
+      margin: 0 0 45px;
     }
 
+
+    /* ==================================================
+       ΠΕΡΙΓΡΑΦΗ
+       ================================================== */
+
+    .about {
+
+      background: #0b0b0b;
+    }
+
+
+    .about-text {
+
+      max-width: 850px;
+
+      font-size: 19px;
+
+      line-height: 1.9;
+
+      color: #bdbdbd;
+    }
+
+
+    .about-placeholder {
+
+      color: #666;
+    }
+
+
+    /* ==================================================
+       ΣΥΝΤΕΛΕΣΤΕΣ
+       ================================================== */
+
+    .contributors {
+
+      background: #151515;
+    }
+
+
     .contributors-grid {
+
       display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(
+          auto-fit,
+          minmax(250px, 1fr)
+        );
 
-      gap: 20px;
+      gap: 1px;
+
+      background: #303030;
     }
+
 
     .contributor {
-      border: 1px solid #292929;
 
-      background: #101010;
+      background: #151515;
 
-      padding: 30px;
+      padding: 32px;
+
+      min-height: 130px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
     }
 
-    .contributor-label {
-      display: block;
+
+    .contributor-role {
 
       font-size: 10px;
 
       letter-spacing: 3px;
 
-      color: #888;
+      text-transform: uppercase;
 
-      margin-bottom: 10px;
+      color: #777;
+
+      margin-bottom: 12px;
     }
+
 
     .contributor-name {
-      font-size: 18px;
+
+      font-size: 19px;
+
+      color: white;
     }
 
 
-    /* =========================================
-       ACTORS
-       ========================================= */
+    /* ==================================================
+       ΗΘΟΠΟΙΟΙ
+       ================================================== */
 
     .actors {
-      padding: 110px 7%;
 
-      background: #0d0d0d;
+      background: #0b0b0b;
     }
 
-    .actors-container {
-      max-width: 1200px;
 
-      margin: auto;
-    }
+    /*
+       Το grid προσαρμόζεται αυτόματα.
+
+       Desktop:
+       4 περίπου άτομα ανά σειρά.
+
+       Tablet:
+       3 περίπου άτομα.
+
+       Mobile:
+       2 άτομα.
+
+       Άρα μπορείς να έχεις
+       5, 10, 20 ή 30 άτομα
+       χωρίς αλλαγή στο design.
+    */
 
     .actors-grid {
+
       display: grid;
 
       grid-template-columns:
-        repeat(4, 1fr);
+        repeat(
+          auto-fit,
+          minmax(190px, 1fr)
+        );
 
-      gap: 30px;
+      gap: 45px 25px;
     }
+
 
     .actor {
+
       text-align: center;
+
+      min-width: 0;
     }
 
+
     .actor-photo {
+
       width: 100%;
 
       aspect-ratio: 3 / 4;
 
-      background: #1c1c1c;
+      background: #181818;
 
       overflow: hidden;
 
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
+
     .actor-photo img {
+
       width: 100%;
+
       height: 100%;
 
       object-fit: cover;
+
+      display: block;
     }
+
+
+    .actor-photo-placeholder {
+
+      width: 100%;
+
+      height: 100%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: #555;
+
+      font-size: 13px;
+
+      letter-spacing: 1px;
+    }
+
 
     .actor-name {
-      font-size: 16px;
+
+      font-size: 18px;
 
       font-weight: bold;
+
+      margin-bottom: 7px;
     }
 
 
-    /* =========================================
-       MEMORIES
-       ========================================= */
+    .actor-role {
 
-    .memories-page {
+      font-size: 13px;
+
+      color: #888;
+    }
+
+
+    /* ==================================================
+       ΑΝΑΜΝΗΣΕΙΣ
+       ================================================== */
+
+    .memories {
+
       background: #151515;
-
-      padding: 110px 7%;
     }
 
-    .memories-container {
-      max-width: 1200px;
-
-      margin: auto;
-    }
 
     .gallery-placeholder {
-      min-height: 300px;
 
-      border: 1px dashed #555;
+      width: 100%;
+
+      min-height: 350px;
+
+      border: 1px dashed #444;
 
       display: flex;
 
@@ -288,15 +430,21 @@
 
       text-align: center;
 
-      color: #888;
+      color: #777;
 
-      font-size: 17px;
+      padding: 30px;
     }
 
-    .video-placeholder {
-      margin-top: 30px;
 
-      min-height: 300px;
+    /* ==================================================
+       VIDEO
+       ================================================== */
+
+    .video-area {
+
+      margin-top: 35px;
+
+      aspect-ratio: 16 / 9;
 
       background: #080808;
 
@@ -308,99 +456,265 @@
 
       justify-content: center;
 
-      color: #777;
+      color: #666;
+
+      text-align: center;
     }
 
 
-    /* =========================================
-       BOOKING
-       ========================================= */
+    /* ==================================================
+       ΚΡΑΤΗΣΗ
+       ================================================== */
 
-    .play-booking {
+    .booking-section {
+
       text-align: center;
 
-      padding: 120px 25px;
+      background: #0b0b0b;
 
-      background: #0d0d0d;
+      padding: 130px 25px;
     }
 
-    .play-booking h2 {
-      font-size: 60px;
+
+    .booking-title {
+
+      font-size: clamp(
+        40px,
+        6vw,
+        70px
+      );
+
+      margin: 0 0 20px;
+    }
+
+
+    .booking-text {
+
+      color: #999;
+
+      margin-bottom: 35px;
+    }
+
+
+    .booking-button {
+
+      display: inline-block;
+
+      padding: 17px 32px;
+
+      border: 1px solid white;
+
+      font-size: 13px;
+
+      letter-spacing: 2px;
+
+      transition: 0.3s;
+    }
+
+
+    .booking-button:hover {
+
+      background: white;
+
+      color: black;
+    }
+
+
+    /* ==================================================
+       FOOTER
+       ================================================== */
+
+    .play-footer {
+
+      border-top: 1px solid #222;
+
+      padding: 50px 7%;
+
+      background: #080808;
+
+      text-align: center;
+    }
+
+
+    .footer-logo {
+
+      max-width: 170px;
+
+      max-height: 80px;
+
+      object-fit: contain;
 
       margin-bottom: 20px;
     }
 
-    .play-booking p {
-      color: #aaa;
 
-      margin-bottom: 30px;
+    .footer-copy {
+
+      color: #666;
+
+      font-size: 12px;
     }
 
 
-    /* =========================================
-       MOBILE
-       ========================================= */
+    /* ==================================================
+       TABLET
+       ================================================== */
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
 
-      .play-title {
-        font-size: 55px;
+      .play-hero-content {
+
+        padding-left: 6%;
+
+        padding-right: 6%;
       }
 
-      .contributors-grid {
-        grid-template-columns: 1fr;
+      .section {
+
+        padding: 90px 6%;
       }
 
       .actors-grid {
+
         grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-      .contributors h2,
-      .actors h2,
-      .memories-page h2 {
-        font-size: 43px;
-      }
-
-      .play-booking h2 {
-        font-size: 45px;
+          repeat(
+            auto-fit,
+            minmax(170px, 1fr)
+          );
       }
 
     }
+
+
+    /* ==================================================
+       MOBILE
+       ================================================== */
+
+    @media (max-width: 600px) {
+
+      .play-hero {
+
+        min-height: 80vh;
+      }
+
+
+      .play-hero-content {
+
+        padding: 80px 22px 55px;
+      }
+
+
+      .play-title {
+
+        font-size: 52px;
+
+        letter-spacing: -2px;
+      }
+
+
+      .play-author {
+
+        font-size: 18px;
+      }
+
+
+      .section {
+
+        padding: 75px 22px;
+      }
+
+
+      .section-title {
+
+        font-size: 43px;
+      }
+
+
+      .about-text {
+
+        font-size: 17px;
+
+        line-height: 1.75;
+      }
+
+
+      .contributors-grid {
+
+        grid-template-columns: 1fr;
+      }
+
+
+      /*
+         Στο κινητό:
+         2 ηθοποιοί ανά σειρά.
+      */
+
+      .actors-grid {
+
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+        gap: 30px 14px;
+      }
+
+
+      .actor-name {
+
+        font-size: 15px;
+      }
+
+
+      .actor-role {
+
+        font-size: 12px;
+      }
+
+
+      .booking-section {
+
+        padding: 90px 22px;
+      }
+
+    }
+
 
   </style>
 
 </head>
 
 
-<body class="play-page">
+<body>
 
 
-  <!-- =========================================
+  <!-- ==================================================
        HERO
-       ========================================= -->
+       ================================================== -->
 
-  <section class="play-hero">
+  <header class="play-hero">
 
-    <div class="play-hero-background"></div>
+    <div class="play-hero-bg"></div>
 
     <div class="play-hero-content">
 
-      <a href="../Index.html"
-         class="back-link">
-
+      <a
+        href="../index.html"
+        class="back-link"
+      >
         ← Επιστροφή στις παραστάσεις
-
       </a>
+
 
       <div class="play-year">
         2026
       </div>
 
+
       <h1 class="play-title">
-        Το ημέρωμα<br>
+        Το ημέρωμα
+        <br>
         της στρίγγλας
       </h1>
+
 
       <div class="play-author">
         του William Shakespeare
@@ -408,50 +722,56 @@
 
     </div>
 
-  </section>
+  </header>
 
 
-  <!-- =========================================
-       ABOUT THE PLAY
-       ========================================= -->
+  <!-- ==================================================
+       ΠΑΡΑΣΤΑΣΗ
+       ================================================== -->
 
-  <section class="play-intro">
+  <section class="section about">
 
-    <div class="section-label">
-      Η ΠΑΡΑΣΤΑΣΗ
+    <div class="section-inner">
+
+      <div class="section-label">
+        Η ΠΑΡΑΣΤΑΣΗ
+      </div>
+
+
+      <h2 class="section-title">
+        Λίγα λόγια για το έργο
+      </h2>
+
+
+      <div class="about-text">
+
+        <span class="about-placeholder">
+          Εδώ θα προστεθεί αργότερα η παρουσίαση
+          της παράστασης, η υπόθεση του έργου
+          και η προσέγγιση της θεατρικής ομάδας.
+        </span>
+
+      </div>
+
     </div>
 
-    <h2>
-      Λίγα λόγια για το έργο
-    </h2>
-
-    <p>
-
-      Εδώ θα γράψουμε αργότερα την παρουσίαση
-      της παράστασης και λίγα λόγια για το έργο.
-
-      Μπορούμε να προσθέσουμε την υπόθεση,
-      την προσέγγιση της θεατρικής ομάδας
-      και όσα θέλετε να γνωρίζει ο επισκέπτης.
-
-    </p>
-
   </section>
 
 
-  <!-- =========================================
-       CONTRIBUTORS
-       ========================================= -->
+  <!-- ==================================================
+       ΣΥΝΤΕΛΕΣΤΕΣ
+       ================================================== -->
 
-  <section class="contributors">
+  <section class="section contributors">
 
-    <div class="contributors-container">
+    <div class="section-inner">
 
       <div class="section-label">
         Η ΟΜΑΔΑ
       </div>
 
-      <h2>
+
+      <h2 class="section-title">
         Συντελεστές της παράστασης
       </h2>
 
@@ -461,9 +781,9 @@
 
         <div class="contributor">
 
-          <span class="contributor-label">
+          <div class="contributor-role">
             Σκηνοθεσία
-          </span>
+          </div>
 
           <div class="contributor-name">
             Όνομα σκηνοθέτη
@@ -474,12 +794,12 @@
 
         <div class="contributor">
 
-          <span class="contributor-label">
+          <div class="contributor-role">
             Υπεύθυνες Εκπαιδευτικοί
-          </span>
+          </div>
 
           <div class="contributor-name">
-            Όνομα εκπαιδευτικού
+            Όνομα / Ονόματα
           </div>
 
         </div>
@@ -487,12 +807,12 @@
 
         <div class="contributor">
 
-          <span class="contributor-label">
+          <div class="contributor-role">
             Μουσική επιμέλεια
-          </span>
+          </div>
 
           <div class="contributor-name">
-            Όνομα
+            Όνομα / Ομάδα
           </div>
 
         </div>
@@ -500,9 +820,9 @@
 
         <div class="contributor">
 
-          <span class="contributor-label">
+          <div class="contributor-role">
             Σκηνικά
-          </span>
+          </div>
 
           <div class="contributor-name">
             Όνομα / Ομάδα
@@ -513,9 +833,9 @@
 
         <div class="contributor">
 
-          <span class="contributor-label">
+          <div class="contributor-role">
             Κοστούμια
-          </span>
+          </div>
 
           <div class="contributor-name">
             Όνομα / Ομάδα
@@ -526,9 +846,35 @@
 
         <div class="contributor">
 
-          <span class="contributor-label">
-            Φωτισμός & Ήχος
-          </span>
+          <div class="contributor-role">
+            Ήχος & Φωτισμός
+          </div>
+
+          <div class="contributor-name">
+            Όνομα / Ομάδα
+          </div>
+
+        </div>
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Αφίσα & Επικοινωνία
+          </div>
+
+          <div class="contributor-name">
+            Όνομα / Ομάδα
+          </div>
+
+        </div>
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Ειδικές ευχαριστίες
+          </div>
 
           <div class="contributor-name">
             Όνομα / Ομάδα
@@ -544,19 +890,20 @@
   </section>
 
 
-  <!-- =========================================
-       ACTORS
-       ========================================= -->
+  <!-- ==================================================
+       ΗΘΟΠΟΙΟΙ
+       ================================================== -->
 
-  <section class="actors">
+  <section class="section actors">
 
-    <div class="actors-container">
+    <div class="section-inner">
 
       <div class="section-label">
-        ΟΙ ΗΘΟΠΟΙΟΙ
+        Ο ΘΙΑΣΟΣ
       </div>
 
-      <h2>
+
+      <h2 class="section-title">
         Οι ηθοποιοί μας
       </h2>
 
@@ -564,73 +911,95 @@
       <div class="actors-grid">
 
 
-        <!-- ΗΘΟΠΟΙΟΣ 1 -->
+        <!--
+          ΑΡΓΟΤΕΡΑ:
+          Αντιγράφουμε αυτό το .actor
+          όσες φορές χρειάζεται.
+
+          Μπορούμε να έχουμε 5,
+          10, 20 ή περισσότερα άτομα.
+        -->
+
 
         <div class="actor">
 
           <div class="actor-photo">
 
-            <img src="../images/actor1.jpg"
-                 alt="Ηθοποιός">
+            <div class="actor-photo-placeholder">
+              ΦΩΤΟΓΡΑΦΙΑ
+            </div>
 
           </div>
 
           <div class="actor-name">
-            Όνομα Ηθοποιού
+            Όνομα ηθοποιού
+          </div>
+
+          <div class="actor-role">
+            Ρόλος
           </div>
 
         </div>
 
 
-        <!-- ΗΘΟΠΟΙΟΣ 2 -->
-
         <div class="actor">
 
           <div class="actor-photo">
 
-            <img src="../images/actor2.jpg"
-                 alt="Ηθοποιός">
+            <div class="actor-photo-placeholder">
+              ΦΩΤΟΓΡΑΦΙΑ
+            </div>
 
           </div>
 
           <div class="actor-name">
-            Όνομα Ηθοποιού
+            Όνομα ηθοποιού
+          </div>
+
+          <div class="actor-role">
+            Ρόλος
           </div>
 
         </div>
 
 
-        <!-- ΗΘΟΠΟΙΟΣ 3 -->
-
         <div class="actor">
 
           <div class="actor-photo">
 
-            <img src="../images/actor3.jpg"
-                 alt="Ηθοποιός">
+            <div class="actor-photo-placeholder">
+              ΦΩΤΟΓΡΑΦΙΑ
+            </div>
 
           </div>
 
           <div class="actor-name">
-            Όνομα Ηθοποιού
+            Όνομα ηθοποιού
+          </div>
+
+          <div class="actor-role">
+            Ρόλος
           </div>
 
         </div>
 
 
-        <!-- ΗΘΟΠΟΙΟΣ 4 -->
-
         <div class="actor">
 
           <div class="actor-photo">
 
-            <img src="../images/actor4.jpg"
-                 alt="Ηθοποιός">
+            <div class="actor-photo-placeholder">
+              ΦΩΤΟΓΡΑΦΙΑ
+            </div>
 
           </div>
 
           <div class="actor-name">
-            Όνομα Ηθοποιού
+            Όνομα ηθοποιού
+          </div>
+
+          <div class="actor-role">
+            Ρόλος
           </div>
 
         </div>
@@ -643,35 +1012,36 @@
   </section>
 
 
-  <!-- =========================================
-       MEMORIES
-       ========================================= -->
+  <!-- ==================================================
+       ΑΝΑΜΝΗΣΕΙΣ
+       ================================================== -->
 
-  <section class="memories-page">
+  <section class="section memories">
 
-    <div class="memories-container">
+    <div class="section-inner">
 
       <div class="section-label">
         ΑΝΑΜΝΗΣΕΙΣ
       </div>
 
-      <h2>
+
+      <h2 class="section-title">
         Από την παράσταση
       </h2>
 
 
       <div class="gallery-placeholder">
 
-        📸 Εδώ θα μπει το carousel
-        με τις φωτογραφίες της παράστασης
+        Εδώ θα τοποθετηθεί αργότερα
+        το carousel φωτογραφιών.
 
       </div>
 
 
-      <div class="video-placeholder">
+      <div class="video-area">
 
-        🎥 Εδώ θα μπει το βίντεο
-        με τις αναμνήσεις της παράστασης
+        Εδώ θα τοποθετηθεί αργότερα
+        το βίντεο της παράστασης.
 
       </div>
 
@@ -680,33 +1050,23 @@
   </section>
 
 
-  
 
-  <!-- =========================================
+  <!-- ==================================================
        FOOTER
-       ========================================= -->
+       ================================================== -->
 
-  <footer>
+  <footer class="play-footer">
 
-    <div class="footer-container">
+    <img
+      src="../images/logo.png"
+      alt="Λογότυπο"
+      class="footer-logo"
+    >
 
-      <div>
-        <img src="../images/logo.png"
-             class="footer-logo"
-             alt="Λογότυπο">
-      </div>
 
-      <div class="footer-text">
+    <div class="footer-copy">
 
-        <p>
-          ΘΕΑΤΡΙΚΗ ΟΜΑΔΑ
-        </p>
-
-        <small>
-          © 2026
-        </small>
-
-      </div>
+      © 2026 · Θεατρική Ομάδα
 
     </div>
 
