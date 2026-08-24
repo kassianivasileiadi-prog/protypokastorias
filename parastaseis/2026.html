@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="el">
 
@@ -78,7 +77,9 @@
 
 
     .play-hero:hover .play-hero-bg {
+
       transform: scale(1.05);
+
     }
 
 
@@ -160,6 +161,7 @@
       color: #ffffff;
 
       transform: translateX(-4px);
+
     }
 
 
@@ -209,6 +211,10 @@
     }
 
 
+    /* ==================================================
+       ΚΟΥΜΠΙ HERO
+       ================================================== */
+
     .hero-button {
 
       display: inline-flex;
@@ -221,20 +227,23 @@
         15px
         23px;
 
+      background: transparent;
+
       border:
         1px solid
-        rgba(255,255,255,0.65);
+        rgba(255,255,255,0.7);
 
       font-size: 11px;
 
       letter-spacing: 2px;
 
-      color: white;
+      color: #ffffff;
 
       transition:
-        background 0.3s,
-        color 0.3s,
-        border 0.3s;
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
     }
 
 
@@ -248,11 +257,14 @@
 
     .hero-button:hover {
 
-      background: white;
+      background: #ffffff;
 
-      color: black;
+      color: #000000;
 
-      border-color: white;
+      border-color: #ffffff;
+
+      transform:
+        translateY(-2px);
     }
 
 
@@ -262,7 +274,8 @@
 
     .section {
 
-      padding: 110px 7%;
+      padding:
+        110px 7%;
     }
 
 
@@ -414,20 +427,6 @@
       background: #0b0b0b;
     }
 
-
-    /*
-       Desktop:
-       αυτόματο grid
-
-       Tablet:
-       προσαρμογή
-
-       Mobile:
-       2 άτομα ανά σειρά
-
-       Μπορεί να έχεις 5,
-       10, 20 ή 30 ηθοποιούς.
-    */
 
     .actors-grid {
 
@@ -838,11 +837,6 @@
       }
 
 
-      /*
-         2 ηθοποιοί ανά σειρά
-         στο κινητό
-      */
-
       .actors-grid {
 
         grid-template-columns:
@@ -1143,7 +1137,26 @@
       <div class="actors-grid">
 
 
-        <!-- ΗΘΟΠΟΙΟΣ 1 -->
+        <div class="actor">
+
+          <div class="actor-photo">
+
+            <div class="actor-photo-placeholder">
+              ΦΩΤΟΓΡΑΦΙΑ
+            </div>
+
+          </div>
+
+          <div class="actor-name">
+            Όνομα ηθοποιού
+          </div>
+
+          <div class="actor-role">
+            Ρόλος
+          </div>
+
+        </div>
+
 
         <div class="actor">
 
@@ -1166,8 +1179,6 @@
         </div>
 
 
-        <!-- ΗΘΟΠΟΙΟΣ 2 -->
-
         <div class="actor">
 
           <div class="actor-photo">
@@ -1188,31 +1199,6 @@
 
         </div>
 
-
-        <!-- ΗΘΟΠΟΙΟΣ 3 -->
-
-        <div class="actor">
-
-          <div class="actor-photo">
-
-            <div class="actor-photo-placeholder">
-              ΦΩΤΟΓΡΑΦΙΑ
-            </div>
-
-          </div>
-
-          <div class="actor-name">
-            Όνομα ηθοποιού
-          </div>
-
-          <div class="actor-role">
-            Ρόλος
-          </div>
-
-        </div>
-
-
-        <!-- ΗΘΟΠΟΙΟΣ 4 -->
 
         <div class="actor">
 
@@ -1283,44 +1269,6 @@
 
   </section>
 
-
-  <!-- ==================================================
-       BOOKING
-       ================================================== -->
-
-  <section
-    class="booking-section"
-  >
-
-    <div class="section-label">
-      ΚΡΑΤΗΣΕΙΣ
-    </div>
-
-
-    <h2 class="booking-title">
-      Θα είστε μαζί μας;
-    </h2>
-
-
-    <p class="booking-text">
-
-      Κλείστε τη θέση σας
-      στην παράσταση.
-
-    </p>
-
-
-    <a
-      href="#"
-      class="booking-button"
-    >
-
-      ΚΡΑΤΗΣΗ ΘΕΣΗΣ
-
-    </a>
-
-
-  </section>
 
 
   <!-- ==================================================
