@@ -1,0 +1,1102 @@
+/* =====================================================
+   ΒΑΣΙΚΑ
+   ===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b0b0b;
+  color: #f4f4f4;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+section {
+  position: relative;
+}
+
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 22px 5%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.75),
+    transparent
+  );
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.logo-link {
+  display: block;
+}
+
+.logo {
+  width: auto;
+  max-width: 150px;
+  max-height: 65px;
+  object-fit: contain;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex: 1;
+}
+
+.nav-menu a {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #eeeeee;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #c9a96e;
+}
+
+.nav-button {
+  padding: 12px 20px;
+
+  border: 1px solid rgba(255,255,255,0.7);
+
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.nav-button:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image:
+    url("images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.30) 45%,
+      rgba(0,0,0,0.85)
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 1000px;
+
+  text-align: center;
+
+  padding-top: 80px;
+}
+
+.hero-small {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #d6d6d6;
+
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(55px, 8vw, 115px);
+
+  line-height: 0.95;
+
+  font-weight: normal;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 25px;
+
+  text-shadow:
+    0 5px 30px rgba(0,0,0,0.5);
+}
+
+.hero-author {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 20px;
+
+  color: #dddddd;
+
+  margin-bottom: 20px;
+}
+
+.hero-line {
+  width: 60px;
+  height: 1px;
+
+  background: #c9a96e;
+
+  margin: 20px auto;
+}
+
+.hero-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin: 25px 0 35px;
+}
+
+.hero-date span {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 26px;
+
+  color: #ffffff;
+}
+
+.hero-date small {
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  color: #cccccc;
+}
+
+.hero-date strong {
+  font-size: 15px;
+
+  font-weight: normal;
+
+  letter-spacing: 1px;
+
+  color: #c9a96e;
+}
+
+.hero-button {
+  display: inline-block;
+
+  padding: 16px 32px;
+
+  background: #f2f2f2;
+  color: #111111;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-3px);
+
+  background: #c9a96e;
+}
+
+.scroll-down {
+  position: absolute;
+
+  bottom: 30px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 24px;
+
+  color: #ffffff;
+
+  opacity: 0.7;
+}
+
+
+/* =====================================================
+   ΓΕΝΙΚΑ SECTIONS
+   ===================================================== */
+
+.section {
+  padding: 120px 7%;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-label {
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  color: #c9a96e;
+
+  text-transform: uppercase;
+
+  margin-bottom: 22px;
+}
+
+.section h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(40px, 6vw, 75px);
+
+  line-height: 1.05;
+
+  font-weight: normal;
+
+  letter-spacing: -2px;
+}
+
+
+/* =====================================================
+   ABOUT
+   ===================================================== */
+
+.about {
+  background: #101010;
+}
+
+.about-text {
+  max-width: 650px;
+
+  margin-top: 45px;
+  margin-left: auto;
+}
+
+.about-text p {
+  color: #bcbcbc;
+
+  font-size: 17px;
+
+  margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   FEATURED PERFORMANCE
+   ===================================================== */
+
+.featured-performance {
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  min-height: 700px;
+
+  background: #151515;
+}
+
+.featured-image {
+  min-height: 650px;
+
+  overflow: hidden;
+}
+
+.featured-image img {
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.featured-performance:hover
+.featured-image img {
+  transform: scale(1.03);
+}
+
+.featured-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 70px;
+}
+
+.featured-content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(45px, 5vw, 75px);
+
+  line-height: 1;
+
+  font-weight: normal;
+
+  margin-bottom: 20px;
+}
+
+.featured-author {
+  color: #c9a96e;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 19px;
+
+  margin-bottom: 30px;
+}
+
+.featured-description {
+  max-width: 500px;
+
+  color: #aaaaaa;
+
+  margin-bottom: 40px;
+}
+
+.performance-info {
+  display: flex;
+
+  gap: 50px;
+
+  margin-bottom: 40px;
+}
+
+.performance-info div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.performance-info span {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #777777;
+}
+
+.performance-info strong {
+  font-size: 15px;
+
+  font-weight: normal;
+}
+
+.dark-button {
+  display: inline-block;
+
+  width: fit-content;
+
+  padding: 15px 28px;
+
+  border: 1px solid #c9a96e;
+
+  color: #c9a96e;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.dark-button:hover {
+  background: #c9a96e;
+
+  color: #111111;
+}
+
+
+/* =====================================================
+   PERFORMANCES
+   ===================================================== */
+
+.performances {
+  background: #0b0b0b;
+}
+
+.section-heading {
+  max-width: 800px;
+
+  margin: 0 auto 65px;
+
+  text-align: center;
+}
+
+.section-heading > p:last-child {
+  margin-top: 25px;
+
+  color: #999999;
+
+  font-size: 16px;
+}
+
+.performance-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+.performance-card {
+  background: #151515;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.performance-card:hover {
+  transform: translateY(-7px);
+}
+
+.card-image {
+  height: 400px;
+
+  overflow: hidden;
+}
+
+.card-image img {
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.performance-card:hover
+.card-image img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.card-content > p {
+  color: #c9a96e;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+.card-content h3 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 29px;
+
+  font-weight: normal;
+
+  margin-bottom: 25px;
+}
+
+.card-content a {
+  font-size: 11px;
+
+  letter-spacing: 1.5px;
+
+  color: #dddddd;
+}
+
+.card-content a:hover {
+  color: #c9a96e;
+}
+
+.empty-card {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 500px;
+
+  border: 1px solid #252525;
+}
+
+.empty-content {
+  text-align: center;
+
+  color: #666666;
+}
+
+.empty-content span {
+  display: block;
+
+  font-size: 50px;
+
+  font-weight: 200;
+
+  margin-bottom: 15px;
+}
+
+.empty-content h3 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  font-weight: normal;
+
+  margin-bottom: 8px;
+}
+
+
+/* =====================================================
+   MEMORIES
+   ===================================================== */
+
+.memories {
+  min-height: 750px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-image:
+    url("images/hero.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-attachment: fixed;
+}
+
+.memories-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    rgba(0,0,0,0.78);
+}
+
+.memories-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 90%;
+
+  max-width: 900px;
+
+  text-align: center;
+}
+
+.memories h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(45px, 7vw, 85px);
+
+  line-height: 1;
+
+  font-weight: normal;
+
+  margin-bottom: 25px;
+}
+
+.memories-content > p:not(.section-label) {
+  color: #bbbbbb;
+
+  margin-bottom: 40px;
+}
+
+.video-placeholder {
+  max-width: 800px;
+
+  height: 400px;
+
+  margin: auto;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  background: rgba(0,0,0,0.45);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  backdrop-filter: blur(5px);
+}
+
+.video-placeholder span {
+  width: 70px;
+  height: 70px;
+
+  border: 1px solid #ffffff;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+
+  padding-left: 4px;
+
+  margin-bottom: 20px;
+}
+
+.video-placeholder p {
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   LOCATION
+   ===================================================== */
+
+.location {
+  background: #101010;
+}
+
+.map-container {
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+.map-placeholder {
+  height: 500px;
+
+  border: 1px solid #292929;
+
+  background: #171717;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #777777;
+}
+
+.map-placeholder span {
+  font-size: 45px;
+
+  margin-bottom: 15px;
+}
+
+.map-placeholder p {
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   BOOKING
+   ===================================================== */
+
+.booking {
+  padding: 130px 7%;
+
+  background: #c9a96e;
+
+  color: #111111;
+
+  text-align: center;
+}
+
+.booking-content {
+  max-width: 800px;
+
+  margin: auto;
+}
+
+.booking .section-label {
+  color: #111111;
+}
+
+.booking h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(45px, 7vw, 80px);
+
+  font-weight: normal;
+
+  line-height: 1;
+
+  margin-bottom: 25px;
+}
+
+.booking p:not(.section-label) {
+  margin-bottom: 35px;
+
+  color: #333333;
+}
+
+.booking-button {
+  display: inline-block;
+
+  padding: 17px 35px;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.booking-button:hover {
+  transform: translateY(-3px);
+
+  background: #252525;
+}
+
+
+/* =====================================================
+   CONTACT
+   ===================================================== */
+
+.contact {
+  background: #0b0b0b;
+}
+
+.contact-grid {
+  max-width: 1000px;
+
+  margin: 70px auto 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 40px;
+}
+
+.contact-grid div {
+  padding-top: 20px;
+
+  border-top: 1px solid #333333;
+}
+
+.contact-grid span {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #777777;
+}
+
+.contact-grid p {
+  margin-top: 12px;
+
+  color: #dddddd;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+  padding: 50px 7%;
+
+  border-top: 1px solid #222222;
+
+  background: #070707;
+
+  text-align: center;
+
+  color: #777777;
+}
+
+.footer-logo {
+  color: #dddddd;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  line-height: 1.5;
+
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 950px) {
+
+  .nav-menu {
+    gap: 15px;
+  }
+
+  .nav-menu a {
+    font-size: 10px;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .featured-performance {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-image {
+    min-height: 550px;
+  }
+
+  .featured-content {
+    padding: 70px 8%;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    padding: 18px 20px;
+  }
+
+  .nav-container {
+    justify-content: center;
+  }
+
+  .logo {
+    max-width: 125px;
+    max-height: 55px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 100svh;
+
+    background-position: center;
+  }
+
+  .hero-content {
+    padding-top: 60px;
+  }
+
+  .hero-small {
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 15vw, 75px);
+
+    letter-spacing: -2px;
+  }
+
+  .hero-author {
+    font-size: 17px;
+  }
+
+  .hero-date {
+    flex-wrap: wrap;
+
+    max-width: 260px;
+
+    margin: 20px auto 30px;
+  }
+
+  .hero-date span {
+    font-size: 23px;
+  }
+
+
+  /* SECTIONS */
+
+  .section {
+    padding: 80px 22px;
+  }
+
+  .section h2 {
+    font-size: 48px;
+  }
+
+
+  /* FEATURED */
+
+  .featured-image {
+    min-height: 400px;
+  }
+
+  .featured-content {
+    padding: 60px 25px;
+  }
+
+  .featured-content h2 {
+    font-size: 50px;
+  }
+
+  .performance-info {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+
+  /* PERFORMANCE CARDS */
+
+  .performance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image {
+    height: 350px;
+  }
+
+
+  /* MEMORIES */
+
+  .memories {
+    min-height: 650px;
+
+    background-attachment: scroll;
+  }
+
+  .video-placeholder {
+    height: 280px;
+  }
+
+
+  /* MAP */
+
+  .map-placeholder {
+    height: 350px;
+  }
+
+
+  /* CONTACT */
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    margin-top: 45px;
+  }
+
+
+  /* BOOKING */
+
+  .booking {
+    padding: 90px 25px;
+  }
+
+}
