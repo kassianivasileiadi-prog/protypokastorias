@@ -1,1068 +1,203 @@
 <!DOCTYPE html>
 <html lang="el">
 
-<head>
+@@ -78,7 +77,9 @@
 
-  <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    .play-hero:hover .play-hero-bg {
 
-  <meta
-    name="description"
-    content="Θεατρική Ομάδα 1ου Πρότυπου Λυκείου Καστοριάς"
+      transform: scale(1.05);
+
+    }
+
+
+@@ -160,6 +161,7 @@
+      color: #ffffff;
+
+      transform: translateX(-4px);
+
+    }
+
+
+@@ -209,6 +211,10 @@
+    }
+
+
+    /* ==================================================
+       ΚΟΥΜΠΙ HERO
+       ================================================== */
+
+    .hero-button {
+
+      display: inline-flex;
+@@ -221,20 +227,23 @@
+        15px
+        23px;
+
+      background: transparent;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.65);
+        rgba(255,255,255,0.7);
+
+      font-size: 11px;
+
+      letter-spacing: 2px;
+
+      color: white;
+      color: #ffffff;
+
+      transition:
+        background 0.3s,
+        color 0.3s,
+        border 0.3s;
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+    }
+
+
+@@ -248,11 +257,14 @@
+
+    .hero-button:hover {
+
+      background: white;
+      background: #ffffff;
+
+      color: black;
+      color: #000000;
+
+      border-color: white;
+      border-color: #ffffff;
+
+      transform:
+        translateY(-2px);
+    }
+
+
+@@ -262,7 +274,8 @@
+
+    .section {
+
+      padding: 110px 7%;
+      padding:
+        110px 7%;
+    }
+
+
+@@ -415,20 +428,6 @@
+    }
+
+
+    /*
+       Desktop:
+       αυτόματο grid
+
+       Tablet:
+       προσαρμογή
+
+       Mobile:
+       2 άτομα ανά σειρά
+
+       Μπορεί να έχεις 5,
+       10, 20 ή 30 ηθοποιούς.
+    */
+
+    .actors-grid {
+
+      display: grid;
+@@ -838,11 +837,6 @@
+      }
+
+
+      /*
+         2 ηθοποιοί ανά σειρά
+         στο κινητό
+      */
+
+      .actors-grid {
+
+        grid-template-columns:
+@@ -1143,8 +1137,6 @@ <h2 class="section-title">
+      <div class="actors-grid">
+
+
+        <!-- ΗΘΟΠΟΙΟΣ 1 -->
+
+        <div class="actor">
+
+          <div class="actor-photo">
+@@ -1166,8 +1158,6 @@ <h2 class="section-title">
+        </div>
+
+
+        <!-- ΗΘΟΠΟΙΟΣ 2 -->
+
+        <div class="actor">
+
+          <div class="actor-photo">
+@@ -1189,8 +1179,6 @@ <h2 class="section-title">
+        </div>
+
+
+        <!-- ΗΘΟΠΟΙΟΣ 3 -->
+
+        <div class="actor">
+
+          <div class="actor-photo">
+@@ -1212,8 +1200,6 @@ <h2 class="section-title">
+        </div>
+
+
+        <!-- ΗΘΟΠΟΙΟΣ 4 -->
+
+        <div class="actor">
+
+          <div class="actor-photo">
+@@ -1284,44 +1270,6 @@ <h2 class="section-title">
+  </section>
+
+
+  <!-- ==================================================
+       BOOKING
+       ================================================== -->
+
+  <section
+    class="booking-section"
   >
 
-  <title>
-    Θεατρική Ομάδα | 1ο Πρότυπο Λύκειο Καστοριάς
-  </title>
-
-  <link rel="stylesheet" href="style.css">
-<style>
-/* ΚΕΝΤΡΑΡΙΣΜΑ ΦΕΤΙΝΗΣ ΠΑΡΑΣΤΑΣΗΣ */
-
-.hero {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.hero-content {
-  width: 100% !important;
-  max-width: 1100px !important;
-  margin: 0 auto !important;
-  text-align: center !important;
-
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-}
-
-.hero-school,
-.hero-label,
-.hero h1,
-.hero-title,
-.hero-author {
-  width: 100% !important;
-  text-align: center !important;
-}
-
-
-</head>
-
-
-<body>
-
-
-<!-- =====================================================
-     NAVBAR
-     ===================================================== -->
-
-<header class="navbar">
-
-  <div class="nav-container">
-
-
-    <a href="index.html" class="logo-link">
-
-      <img
-        src="images/logo.png"
-        alt="1ο Πρότυπο Λύκειο Καστοριάς"
-        class="logo"
-      >
-
-    </a>
-
-
-    <nav class="nav-menu">
-
-      <a href="#home">
-        Αρχική
-      </a>
-
-      <a href="#about">
-        Η ομάδα μας
-      </a>
-
-      <a href="#performances">
-        Παραστάσεις
-      </a>
-
-      <a href="#memories">
-        Αναμνήσεις
-      </a>
-
-      <a href="#location">
-        Τοποθεσία
-      </a>
-
-      <a href="#contact">
-        Επικοινωνία
-      </a>
-
-    </nav>
-
-
-    <a
-      href="#booking"
-      class="nav-button"
-    >
-      ΚΡΑΤΗΣΗ ΘΕΣΗΣ
-    </a>
-
-
-  </div>
-
-</header>
-
-
-
-<!-- =====================================================
-     HERO
-     ===================================================== -->
-
-<section
-  class="hero"
-  id="home"
->
-
-  <div class="hero-background"></div>
-
-  <div class="hero-overlay"></div>
-
-
-  <div class="hero-content">
-
-
-    <p class="hero-school">
-      1ο ΠΡΟΤΥΠΟ ΛΥΚΕΙΟ ΚΑΣΤΟΡΙΑΣ
-    </p>
-
-
-    <p class="hero-label">
-      ΘΕΑΤΡΙΚΗ ΟΜΑΔΑ
-    </p>
-
-
-    <h1>
-      ΦΕΤΙΝΗ<br>
-      ΠΑΡΑΣΤΑΣΗ
-    </h1>
-
-
-    <p class="hero-title">
-      Ο τίτλος της παράστασης
-    </p>
-
-
-    <p class="hero-author">
-      Συγγραφέας
-    </p>
-
-
-    <div class="hero-divider"></div>
-
-
-    <div class="hero-details">
-
-      <div>
-
-        <span>
-          ΗΜΕΡΟΜΗΝΙΕΣ
-        </span>
-
-        <strong>
-          24 • 25 • 26 Ιουνίου
-        </strong>
-
-      </div>
-
-
-      <div>
-
-        <span>
-          ΩΡΑ
-        </span>
-
-        <strong>
-          21:30
-        </strong>
-
-      </div>
-
-    </div>
-
-
-    <a
-      href="#booking"
-      class="hero-button"
-    >
-      ΚΡΑΤΗΣΗ ΘΕΣΗΣ
-    </a>
-
-
-  </div>
-
-
-  <div class="hero-scroll">
-    ↓
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     ABOUT
-     ===================================================== -->
-
-<section
-  class="about section"
-  id="about"
->
-
-
-  <div class="section-container">
-
-
-    <div class="section-intro">
-
-
-      <p class="section-label">
-        Η ΘΕΑΤΡΙΚΗ ΜΑΣ ΟΜΑΔΑ
-      </p>
-
-
-      <h2>
-        Το θέατρο είναι<br>
-        μια ιστορία που ζούμε μαζί.
-      </h2>
-
-
-    </div>
-
-
-    <div class="about-text">
-
-
-      <p>
-
-        Η θεατρική ομάδα του
-        1ου Πρότυπου Λυκείου Καστοριάς
-        αποτελεί έναν χώρο δημιουργίας,
-        συνεργασίας και έκφρασης.
-
-      </p>
-
-
-      <p>
-
-        Μαθητές και εκπαιδευτικοί
-        συνεργάζονται για να δημιουργήσουν
-        κάθε χρόνο μια νέα θεατρική
-        παράσταση και να μοιραστούν
-        μοναδικές στιγμές με το κοινό.
-
-      </p>
-
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     PERFORMANCES
-     ===================================================== -->
-
-<section
-  class="performances section"
-  id="performances"
->
-
-
-  <div class="section-container">
-
-
-    <div class="section-heading">
-
-
-      <p class="section-label">
-        ΤΟ ΘΕΑΤΡΙΚΟ ΜΑΣ ΑΡΧΕΙΟ
-      </p>
-
-
-      <h2>
-        Οι παραστάσεις μας
-      </h2>
-
-
-      <p>
-
-        Μια διαδρομή μέσα στον χρόνο,
-        μέσα από τις παραστάσεις,
-        τους ανθρώπους και τις αναμνήσεις μας.
-
-      </p>
-
-
-    </div>
-
-
-
-    <div class="performance-grid">
-
-
-      <!-- =================================================
-           2027
-           ================================================= -->
-
-      <article class="performance-card">
-
-
-        <div class="poster-container">
-
-
-          <img
-            src="images/2027.jpg"
-            alt="Φετινή παράσταση"
-          >
-
-
-          <div class="poster-year">
-            2027
-          </div>
-
-
-        </div>
-
-
-        <div class="performance-info">
-
-
-          <p class="performance-year">
-            2027
-          </p>
-
-
-          <h3>
-            Φετινή παράσταση
-          </h3>
-
-
-          <p class="performance-author">
-            Ο τίτλος και ο συγγραφέας
-            θα προστεθούν εδώ.
-          </p>
-
-
-          <a
-            href="parastaseis/2027.html"
-            class="performance-link"
-          >
-            ΔΕΙΤΕ ΤΗΝ ΠΑΡΑΣΤΑΣΗ →
-          </a>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- =================================================
-           2026
-           ================================================= -->
-
-      <article class="performance-card">
-
-
-        <div class="poster-container">
-
-
-          <img
-            src="images/2026.jpg"
-            alt="Το ημέρωμα της στρίγγλας"
-          >
-
-
-          <div class="poster-year">
-            2026
-          </div>
-
-
-        </div>
-
-
-        <div class="performance-info">
-
-
-          <p class="performance-year">
-            2026
-          </p>
-
-
-          <h3>
-            Το ημέρωμα της στρίγγλας
-          </h3>
-
-
-          <p class="performance-author">
-            William Shakespeare
-          </p>
-
-
-          <a
-            href="parastaseis/2026.html"
-            class="performance-link"
-          >
-            ΔΕΙΤΕ ΤΗΝ ΠΑΡΑΣΤΑΣΗ →
-          </a>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- =================================================
-           2025
-           ================================================= -->
-
-      <article class="performance-card">
-
-
-        <div class="poster-container">
-
-
-          <img
-            src="images/2025.jpg"
-            alt="Ο Μπαμπάς ο Πόλεμος"
-          >
-
-
-          <div class="poster-year">
-            2025
-          </div>
-
-
-        </div>
-
-
-        <div class="performance-info">
-
-
-          <p class="performance-year">
-            2025
-          </p>
-
-
-          <h3>
-            Ο Μπαμπάς ο Πόλεμος
-          </h3>
-
-
-          <p class="performance-author">
-            Ιάκωβος Καμπανέλλης
-          </p>
-
-
-          <a
-            href="parastaseis/2025.html"
-            class="performance-link"
-          >
-            ΔΕΙΤΕ ΤΗΝ ΠΑΡΑΣΤΑΣΗ →
-          </a>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- =================================================
-           2024
-           ================================================= -->
-
-      <article class="performance-card">
-
-
-        <div class="poster-container">
-
-
-          <img
-            src="images/2024.jpg"
-            alt="Ο Επιθεωρητής"
-          >
-
-
-          <div class="poster-year">
-            2024
-          </div>
-
-
-        </div>
-
-
-        <div class="performance-info">
-
-
-          <p class="performance-year">
-            2024
-          </p>
-
-
-          <h3>
-            Ο Επιθεωρητής
-          </h3>
-
-
-          <p class="performance-author">
-            Nicolai Gogol
-          </p>
-
-
-          <a
-            href="parastaseis/2024.html"
-            class="performance-link"
-          >
-            ΔΕΙΤΕ ΤΗΝ ΠΑΡΑΣΤΑΣΗ →
-          </a>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- =================================================
-           2023 - THEIA
-           ================================================= -->
-
-      <article class="performance-card">
-
-
-        <div class="poster-container">
-
-
-          <img
-            src="images/2023-theia.jpg"
-            alt="Η Θεία από το Σικάγο"
-          >
-
-
-          <div class="poster-year">
-            2023
-          </div>
-
-
-        </div>
-
-
-        <div class="performance-info">
-
-
-          <p class="performance-year">
-            2023
-          </p>
-
-
-          <h3>
-            Η Θεία από το Σικάγο
-          </h3>
-
-
-          <p class="performance-author">
-            Ελληνικό θεατρικό έργο
-          </p>
-
-
-          <a
-            href="parastaseis/2023-theia.html"
-            class="performance-link"
-          >
-            ΔΕΙΤΕ ΤΗΝ ΠΑΡΑΣΤΑΣΗ →
-          </a>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- =================================================
-           2023 - KITRINA
-           ================================================= -->
-
-      <article class="performance-card">
-
-
-        <div class="poster-container">
-
-
-          <img
-            src="images/2023-kitrina.jpg"
-            alt="Τα κίτρινα γάντια"
-          >
-
-
-          <div class="poster-year">
-            2023
-          </div>
-
-
-        </div>
-
-
-        <div class="performance-info">
-
-
-          <p class="performance-year">
-            2023
-          </p>
-
-
-          <h3>
-            Τα κίτρινα γάντια
-          </h3>
-
-
-          <p class="performance-author">
-            Σακελλαρίου & Γιαννακόπουλου
-          </p>
-
-
-          <a
-            href="parastaseis/2023-kitrina.html"
-            class="performance-link"
-          >
-            ΔΕΙΤΕ ΤΗΝ ΠΑΡΑΣΤΑΣΗ →
-          </a>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- =================================================
-           2017
-           ================================================= -->
-
-      <article class="performance-card">
-
-
-        <div class="poster-container">
-
-
-          <img
-            src="images/2017.jpg"
-            alt="Ο αρχοντοχωριάτης"
-          >
-
-
-          <div class="poster-year">
-            2017
-          </div>
-
-
-        </div>
-
-
-        <div class="performance-info">
-
-
-          <p class="performance-year">
-            2017
-          </p>
-
-
-          <h3>
-            Ο αρχοντοχωριάτης
-          </h3>
-
-
-          <p class="performance-author">
-            Μολιέρος
-          </p>
-
-
-          <a
-            href="parastaseis/2017.html"
-            class="performance-link"
-          >
-            ΔΕΙΤΕ ΤΗΝ ΠΑΡΑΣΤΑΣΗ →
-          </a>
-
-
-        </div>
-
-
-      </article>
-
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     MEMORIES
-     ===================================================== -->
-
-<section
-  class="memories"
-  id="memories"
->
-
-
-  <div class="memories-background"></div>
-
-  <div class="memories-overlay"></div>
-
-
-  <div class="memories-content">
-
-
-    <p class="section-label">
-      ΑΝΑΜΝΗΣΕΙΣ
-    </p>
-
-
-    <h2>
-      Οι στιγμές<br>
-      που έμειναν.
-    </h2>
-
-
-    <p>
-
-      Φωτογραφίες και βίντεο
-      από τις παραστάσεις μας,
-      τις πρόβες και τις στιγμές
-      που μοιραστήκαμε.
-
-    </p>
-
-
-    <div class="memory-buttons">
-
-
-      <a
-        href="#"
-        class="memory-button"
-      >
-        📸 ΦΩΤΟΓΡΑΦΙΕΣ
-      </a>
-
-
-      <a
-        href="#"
-        class="memory-button"
-      >
-        ▶ ΒΙΝΤΕΟ
-      </a>
-
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     LOCATION
-     ===================================================== -->
-
-<section
-  class="location section"
-  id="location"
->
-
-
-  <div class="section-container">
-
-
-    <div class="section-heading">
-
-
-      <p class="section-label">
-        ΤΟΠΟΘΕΣΙΑ
-      </p>
-
-
-      <h2>
-        Πού θα μας βρείτε
-      </h2>
-
-
-      <p>
-
-        Ο χάρτης και οι πληροφορίες
-        της τοποθεσίας της παράστασης
-        θα προστεθούν εδώ.
-
-      </p>
-
-
-    </div>
-
-
-    <div class="map-box">
-
-
-      <div class="map-placeholder">
-
-
-        <span>
-          📍
-        </span>
-
-
-        <h3>
-          Χάρτης
-        </h3>
-
-
-        <p>
-          Εδώ θα τοποθετήσουμε
-          τον Google Maps χάρτη.
-        </p>
-
-
-      </div>
-
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     BOOKING
-     ===================================================== -->
-
-<section
-  class="booking"
-  id="booking"
->
-
-
-  <div class="booking-overlay"></div>
-
-
-  <div class="booking-content">
-
-
-    <p class="section-label">
+    <div class="section-label">
       ΚΡΑΤΗΣΕΙΣ
-    </p>
+    </div>
 
 
-    <h2>
-      Κλείστε τη θέση σας
+    <h2 class="booking-title">
+      Θα είστε μαζί μας;
     </h2>
 
 
-    <p>
+    <p class="booking-text">
 
-      Εξασφαλίστε τη θέση σας
+      Κλείστε τη θέση σας
       στην παράσταση.
 
     </p>
 
 
-    <!--
-      ΕΔΩ ΕΙΝΑΙ Η ΥΠΑΡΧΟΥΣΑ ΦΟΡΜΑ
-      ΚΡΑΤΗΣΕΩΝ ΠΟΥ ΕΧΟΥΜΕ ΗΔΗ ΦΤΙΑΞΕΙ.
-    -->
-
-
     <a
-      href="https://kassianivasileiadi-prog.github.io/Theatro/theater.html"
+      href="#"
       class="booking-button"
-      target="_blank"
-      rel="noopener"
     >
 
-      🎟 ΚΡΑΤΗΣΗ ΘΕΣΗΣ
+      ΚΡΑΤΗΣΗ ΘΕΣΗΣ
 
     </a>
 
 
-  </div>
+  </section>
 
 
-</section>
-
-
-
-<!-- =====================================================
-     CONTACT
-     ===================================================== -->
-
-<section
-  class="contact section"
-  id="contact"
->
-
-
-  <div class="section-container">
-
-
-    <div class="section-heading">
-
-
-      <p class="section-label">
-        ΕΠΙΚΟΙΝΩΝΙΑ
-      </p>
-
-
-      <h2>
-        Επικοινωνήστε<br>
-        μαζί μας
-      </h2>
-
-
-    </div>
-
-
-
-    <div class="contact-grid">
-
-
-      <div class="contact-item">
-
-
-        <span>
-          EMAIL
-        </span>
-
-
-        <p>
-          Θα προστεθεί
-        </p>
-
-
-      </div>
-
-
-      <div class="contact-item">
-
-
-        <span>
-          ΤΗΛΕΦΩΝΟ
-        </span>
-
-
-        <p>
-          Θα προστεθεί
-        </p>
-
-
-      </div>
-
-
-      <div class="contact-item">
-
-
-        <span>
-          ΣΧΟΛΕΙΟ
-        </span>
-
-
-        <p>
-          1ο Πρότυπο Λύκειο Καστοριάς
-        </p>
-
-
-      </div>
-
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-     ===================================================== -->
-
-<footer>
-
-
-  <div class="footer-container">
-
-
-    <img
-      src="images/logo.png"
-      alt="1ο Πρότυπο Λύκειο Καστοριάς"
-      class="footer-logo"
-    >
-
-
-    <div class="footer-text">
-
-
-      <p>
-        ΘΕΑΤΡΙΚΗ ΟΜΑΔΑ
-      </p>
-
-
-      <p>
-        1ο ΠΡΟΤΥΠΟ ΛΥΚΕΙΟ ΚΑΣΤΟΡΙΑΣ
-      </p>
-
-
-      <small>
-        © 2026
-      </small>
-
-
-    </div>
-
-
-  </div>
-
-
-</footer>
-
-
-
-</body>
-
-</html>
+  <!-- ==================================================
+       FOOTER
