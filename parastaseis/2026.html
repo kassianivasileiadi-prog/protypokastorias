@@ -5,17 +5,13 @@
 
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <title>Το ημέρωμα της στρίγγλας | 2026</title>
 
-  <link
-    rel="stylesheet"
-    href="../style.css"
-  >
+  <link rel="stylesheet"
+        href="../style.css">
 
   <style>
 
@@ -347,197 +343,259 @@
 
 
     /* ==================================================
-       ΘΙΑΣΟΣ
+       CONTRIBUTORS
        ================================================== */
 
-    .cast-section {
+    .contributors {
+
+      background: #151515;
+    }
+
+
+    .contributors-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(250px, 1fr)
+        );
+
+      gap: 1px;
+
+      background: #303030;
+    }
+
+
+    .contributor {
 
       background: #151515;
 
-      position: relative;
+      padding: 32px;
 
-      overflow: hidden;
-    }
-
-
-    .cast-box {
-
-      width: 100%;
-
-      max-width: 1050px;
-
-      margin: auto;
-
-      padding:
-        55px
-        60px;
-
-      border:
-        1px solid
-        rgba(255,255,255,0.12);
+      min-height: 130px;
 
       display: flex;
 
-      align-items: center;
+      flex-direction: column;
 
-      justify-content: space-between;
-
-      gap: 50px;
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(255,255,255,0.035),
-          rgba(255,255,255,0.01)
-        );
+      justify-content: center;
 
       transition:
-        border-color 0.3s ease,
-        transform 0.3s ease,
-        background 0.3s ease;
+        background 0.3s;
     }
 
 
-    .cast-box:hover {
+    .contributor:hover {
 
-      border-color:
-        rgba(255,255,255,0.35);
-
-      transform:
-        translateY(-4px);
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(255,255,255,0.055),
-          rgba(255,255,255,0.015)
-        );
+      background: #1c1c1c;
     }
 
 
-    .cast-text {
+    .contributor-role {
 
-      max-width: 650px;
+      font-size: 10px;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      color: #777;
+
+      margin-bottom: 12px;
     }
 
 
-    .cast-small-title {
+    .contributor-name {
 
-      font-size: 11px;
+      font-size: 19px;
 
-      letter-spacing: 4px;
-
-      color: #888;
-
-      margin-bottom: 15px;
+      color: white;
     }
 
 
-    .cast-main-title {
+    /* ==================================================
+       ΘΙΑΣΟΣ - LINK CARD
+       ================================================== */
 
-      font-size:
-        clamp(
-          32px,
-          4vw,
-          52px
-        );
+    .cast-link-section {
 
-      line-height: 1;
+      background: #0b0b0b;
 
-      margin-bottom: 18px;
-    }
-
-
-    .cast-description {
-
-      margin: 0;
-
-      color: #999;
-
-      font-size: 16px;
-
-      line-height: 1.7;
-
-      max-width: 600px;
-    }
-
-
-    .cast-number {
-
-      display: block;
-
-      margin-top: 18px;
-
-      color: #ffffff;
-
-      font-size: 13px;
-
-      letter-spacing: 2px;
-
-      font-weight: bold;
+      padding:
+        90px 7%;
     }
 
 
     .cast-link {
 
-      flex-shrink: 0;
+      position: relative;
 
-      display: inline-flex;
+      display: flex;
 
       align-items: center;
 
-      gap: 20px;
+      justify-content: center;
 
-      padding:
-        16px
-        22px;
+      min-height: 360px;
 
-      border:
-        1px solid
-        rgba(255,255,255,0.55);
+      overflow: hidden;
 
-      font-size: 11px;
+      background-image:
+        url("../images/2026.jpg");
 
-      letter-spacing: 1.5px;
+      background-size: cover;
 
-      font-weight: bold;
+      background-position: center;
+
+      border: 1px solid #333;
 
       transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.3s ease;
+        transform 0.4s ease,
+        border-color 0.4s ease;
     }
 
 
-    .cast-link-arrow {
+    .cast-link::before {
 
-      font-size: 19px;
+      content: "";
 
-      line-height: 1;
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.82),
+          rgba(0,0,0,0.55),
+          rgba(0,0,0,0.82)
+        );
 
       transition:
-        transform 0.3s ease;
+        background 0.4s ease;
     }
 
 
     .cast-link:hover {
 
-      background: #ffffff;
+      transform: translateY(-5px);
 
-      color: #000000;
-
-      border-color: #ffffff;
-
-      transform:
-        translateY(-2px);
+      border-color: #777;
     }
 
 
-    .cast-link:hover .cast-link-arrow {
+    .cast-link:hover::before {
 
-      transform:
-        translateX(5px);
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.72),
+          rgba(0,0,0,0.40),
+          rgba(0,0,0,0.72)
+        );
+    }
+
+
+    .cast-link-content {
+
+      position: relative;
+
+      z-index: 2;
+
+      text-align: center;
+
+      padding: 40px 25px;
+
+      max-width: 700px;
+    }
+
+
+    .cast-link-label {
+
+      font-size: 11px;
+
+      letter-spacing: 4px;
+
+      color: #bdbdbd;
+
+      margin-bottom: 18px;
+    }
+
+
+    .cast-link-title {
+
+      font-size:
+        clamp(
+          38px,
+          5vw,
+          62px
+        );
+
+      line-height: 1;
+
+      margin: 0 0 18px;
+
+      font-weight: 700;
+    }
+
+
+    .cast-link-text {
+
+      color: #d0d0d0;
+
+      font-size: 17px;
+
+      margin-bottom: 30px;
+    }
+
+
+    .cast-link-button {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 15px;
+
+      padding:
+        14px 22px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.8);
+
+      font-size: 11px;
+
+      font-weight: bold;
+
+      letter-spacing: 2px;
+
+      transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+    }
+
+
+    .cast-link-button span {
+
+      font-size: 17px;
+
+      line-height: 0;
+    }
+
+
+    .cast-link:hover .cast-link-button {
+
+      background: white;
+
+      color: black;
+
+      transform: translateY(-2px);
     }
 
 
@@ -547,7 +605,7 @@
 
     .memories {
 
-      background: #0b0b0b;
+      background: #151515;
     }
 
 
@@ -660,18 +718,7 @@
       .section {
 
         padding:
-          90px
-          6%;
-      }
-
-
-      .cast-box {
-
-        padding:
-          45px
-          40px;
-
-        gap: 35px;
+          90px 6%;
       }
 
     }
@@ -750,33 +797,27 @@
         font-size: 17px;
 
         margin:
-          22px
-          0
-          28px;
+          22px 0 28px;
       }
 
 
       .hero-button {
 
         padding:
-          14px
-          18px;
+          14px 18px;
       }
 
 
       .section {
 
         padding:
-          75px
-          22px;
+          75px 22px;
       }
 
 
       .section-title {
 
         font-size: 43px;
-
-        margin-bottom: 35px;
       }
 
 
@@ -788,141 +829,67 @@
       }
 
 
-      /* ----------------------------------------------
-         ΘΙΑΣΟΣ MOBILE
-         ---------------------------------------------- */
+      /* ΘΙΑΣΟΣ MOBILE */
 
-      .cast-box {
+      .cast-link-section {
 
         padding:
-          35px
-          25px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 28px;
+          65px 22px;
       }
 
 
-      .cast-small-title {
+      .cast-link {
 
-        font-size: 10px;
+        min-height: 390px;
+
+        background-position: center;
+      }
+
+
+      .cast-link-content {
+
+        padding:
+          35px 20px;
+      }
+
+
+      .cast-link-label {
+
+        font-size: 9px;
 
         letter-spacing: 3px;
       }
 
 
-      .cast-main-title {
+      .cast-link-title {
 
-        font-size: 36px;
+        font-size: 40px;
 
-        line-height: 1;
+        line-height: 0.98;
       }
 
 
-      .cast-description {
+      .cast-link-text {
 
         font-size: 15px;
 
-        line-height: 1.65;
+        line-height: 1.6;
       }
 
 
-      .cast-number {
-
-        font-size: 11px;
-
-        letter-spacing: 1.5px;
-      }
-
-
-      .cast-link {
-
-        width: 100%;
-
-        justify-content: space-between;
+      .cast-link-button {
 
         padding:
-          15px
-          17px;
+          13px 17px;
 
         font-size: 10px;
       }
 
 
-      /* ----------------------------------------------
-         MEMORIES
-         ---------------------------------------------- */
-
-      .gallery-placeholder {
-
-        min-height: 280px;
-
-        padding: 20px;
-
-        font-size: 14px;
-      }
-
-
-      .video-area {
-
-        margin-top: 25px;
-
-        font-size: 14px;
-      }
-
-
-      /* ----------------------------------------------
-         FOOTER
-         ---------------------------------------------- */
-
-      .play-footer {
+      .booking-section {
 
         padding:
-          40px
-          22px;
-      }
-
-    }
-
-
-    /* ==================================================
-       ΠΟΛΥ ΜΙΚΡΑ ΚΙΝΗΤΑ
-       ================================================== */
-
-    @media (max-width: 380px) {
-
-      .play-title {
-
-        font-size: 46px;
-      }
-
-
-      .cast-box {
-
-        padding:
-          30px
-          20px;
-      }
-
-
-      .cast-main-title {
-
-        font-size: 32px;
-      }
-
-
-      .cast-link {
-
-        font-size: 9px;
-
-        padding:
-          14px
-          14px;
+          90px 22px;
       }
 
     }
@@ -1036,68 +1003,173 @@
 
 
   <!-- ==================================================
-       ΘΙΑΣΟΣ
+       CONTRIBUTORS
        ================================================== -->
 
   <section
-    class="section cast-section"
+    class="section contributors"
   >
 
     <div class="section-inner">
 
 
       <div class="section-label">
-        Ο ΘΙΑΣΟΣ
+        Η ΟΜΑΔΑ
       </div>
 
 
-      <div class="cast-box">
+      <h2 class="section-title">
+        Συντελεστές της παράστασης
+      </h2>
 
 
-        <div class="cast-text">
+      <div class="contributors-grid">
 
-          <div class="cast-small-title">
-            2026 · ΤΟ ΗΜΕΡΩΜΑ ΤΗΣ ΣΤΡΙΓΓΛΑΣ
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Σκηνοθεσία
           </div>
 
-
-          <h2 class="cast-main-title">
-            Οι άνθρωποι<br>
-            πίσω από την παράσταση.
-          </h2>
-
-
-          <p class="cast-description">
-            Γνωρίστε τους μαθητές που
-            έδωσαν ζωή στους χαρακτήρες
-            της φετινής μας παράστασης.
-          </p>
-
-
-          <span class="cast-number">
-            25 ΗΘΟΠΟΙΟΙ
-          </span>
+          <div class="contributor-name">
+            Όνομα σκηνοθέτη
+          </div>
 
         </div>
 
 
-        <a
-          href="thiasos-2026.html"
-          class="cast-link"
-        >
+        <div class="contributor">
 
-          <span>
-            ΓΝΩΡΙΣΤΕ ΤΟΝ ΘΙΑΣΟ
-          </span>
+          <div class="contributor-role">
+            Οργάνωση &amp; Συντονισμός
+          </div>
 
-          <span class="cast-link-arrow">
-            →
-          </span>
+          <div class="contributor-name">
+            Όνομα / Ονόματα
+          </div>
 
-        </a>
+        </div>
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Τεχνική Υποστήριξη (Ήχος/Φώτα)
+          </div>
+
+          <div class="contributor-name">
+            Όνομα / Ομάδα
+          </div>
+
+        </div>
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Καλλιτεχνική Επιμέλεια (Σκηνικά/Κοστούμια)
+          </div>
+
+          <div class="contributor-name">
+            Όνομα / Ομάδα
+          </div>
+
+        </div>
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Σχεδιασμός &amp; Ανάπτυξη Ιστοσελίδας
+          </div>
+
+          <div class="contributor-name">
+            Όνομα / Ομάδα
+          </div>
+
+        </div>
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Αφίσα &amp; Επικοινωνία
+          </div>
+
+          <div class="contributor-name">
+            Όνομα / Ομάδα
+          </div>
+
+        </div>
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Ειδικές ευχαριστίες
+          </div>
+
+          <div class="contributor-name">
+            Ονόματα γονέων, συλλόγων ή άλλων καθηγητών που βοήθησαν
+          </div>
+
+        </div>
 
 
       </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       ΘΙΑΣΟΣ
+       ================================================== -->
+
+  <section class="cast-link-section">
+
+    <div class="section-inner">
+
+
+      <a
+        href="2026-theasos.html"
+        class="cast-link"
+      >
+
+        <div class="cast-link-content">
+
+
+          <div class="cast-link-label">
+            Ο ΘΙΑΣΟΣ
+          </div>
+
+
+          <h2 class="cast-link-title">
+            Γνωρίστε τον θίασο
+          </h2>
+
+
+          <p class="cast-link-text">
+            Ανακαλύψτε όλους τους ηθοποιούς
+            και τους ρόλους τους στην παράσταση.
+          </p>
+
+
+          <span class="cast-link-button">
+
+            ΔΕΙΤΕ ΟΛΟ ΤΟΝ ΘΙΑΣΟ
+
+            <span>→</span>
+
+          </span>
+
+
+        </div>
+
+      </a>
 
 
     </div>
