@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Ο Μπαμπάς ο Πόλεμος | 2025</title>
+
+  <link rel="stylesheet"
+        href="../style.css">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #0b0b0b;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* ==================================================
+       HERO
+       ================================================== */
+
+    .play-hero {
+
+      min-height: 92vh;
+
+      position: relative;
+
+      display: flex;
+
+      align-items: flex-end;
+
+      overflow: hidden;
+
+      background: #080808;
+    }
+
+
+    .play-hero-bg {
+
+      position: absolute;
+
+      inset: 0;
+
+      background-image:
+        url("../images/2026.jpg");
+
+      background-size: cover;
+
+      background-position: center;
+
+      transform: scale(1.02);
+
+      transition:
+        transform 8s ease;
+    }
+
+
+    .play-hero:hover .play-hero-bg {
+
+      transform: scale(1.05);
+
+    }
+
+
+    .play-hero-overlay {
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.92) 0%,
+          rgba(0,0,0,0.70) 42%,
+          rgba(0,0,0,0.20) 100%
+        );
+    }
+
+
+    .play-hero::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      right: 0;
+
+      bottom: 0;
+
+      height: 35%;
+
+      background:
+        linear-gradient(
+          transparent,
+          rgba(0,0,0,0.90)
+        );
+
+      pointer-events: none;
+    }
+
+
+    .play-hero-content {
+
+      position: relative;
+
+      z-index: 3;
+
+      width: 100%;
+
+      padding:
+        80px
+        7%
+        75px;
+
+      max-width: 1050px;
+    }
+
+
+    .back-link {
+
+      display: inline-block;
+
+      margin-bottom: 55px;
+
+      font-size: 13px;
+
+      letter-spacing: 1px;
+
+      color: #d0d0d0;
+
+      transition: 0.3s;
+    }
+
+
+    .back-link:hover {
+
+      color: #ffffff;
+
+      transform: translateX(-4px);
+
+    }
+
+
+    .play-year {
+
+      font-size: 12px;
+
+      letter-spacing: 6px;
+
+      color: #bdbdbd;
+
+      margin-bottom: 20px;
+    }
+
+
+    .play-title {
+
+      font-size:
+        clamp(
+          55px,
+          8vw,
+          110px
+        );
+
+      line-height: 0.91;
+
+      letter-spacing: -5px;
+
+      margin: 0;
+
+      max-width: 950px;
+
+      font-weight: 700;
+    }
+
+
+    .play-author {
+
+      margin:
+        28px
+        0
+        35px;
+
+      font-size: 21px;
+
+      color: #c9c9c9;
+    }
+
+
+    /* ==================================================
+       ΚΟΥΜΠΙ HERO
+       ================================================== */
+
+    .hero-button {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 18px;
+
+      padding:
+        15px
+        23px;
+
+      background: transparent;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.7);
+
+      font-size: 11px;
+
+      letter-spacing: 2px;
+
+      color: #ffffff;
+
+      transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+    }
+
+
+    .hero-button span {
+
+      font-size: 17px;
+
+      line-height: 0;
+    }
+
+
+    .hero-button:hover {
+
+      background: #ffffff;
+
+      color: #000000;
+
+      border-color: #ffffff;
+
+      transform:
+        translateY(-2px);
+    }
+
+
+    /* ==================================================
+       GENERAL SECTIONS
+       ================================================== */
+
+    .section {
+
+      padding:
+        110px 7%;
+    }
+
+
+    .section-inner {
+
+      max-width: 1200px;
+
+      margin: auto;
+    }
+
+
+    .section-label {
+
+      font-size: 11px;
+
+      letter-spacing: 4px;
+
+      color: #888;
+
+      margin-bottom: 18px;
+    }
+
+
+    .section-title {
+
+      font-size:
+        clamp(
+          40px,
+          5vw,
+          65px
+        );
+
+      line-height: 1;
+
+      margin:
+        0
+        0
+        45px;
+    }
+
+
+    /* ==================================================
+       ABOUT
+       ================================================== */
+
+    .about {
+
+      background: #0b0b0b;
+    }
+
+
+    .about-text {
+
+      max-width: 850px;
+
+      font-size: 19px;
+
+      line-height: 1.9;
+
+      color: #bdbdbd;
+    }
+
+
+    .about-placeholder {
+
+      color: #666;
+    }
+
+
+    /* ==================================================
+       CONTRIBUTORS
+       ================================================== */
+
+    .contributors {
+
+      background: #151515;
+    }
+
+
+    .contributors-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(250px, 1fr)
+        );
+
+      gap: 1px;
+
+      background: #303030;
+    }
+
+
+    .contributor {
+
+      background: #151515;
+
+      padding: 32px;
+
+      min-height: 130px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      transition:
+        background 0.3s;
+    }
+
+
+    .contributor:hover {
+
+      background: #1c1c1c;
+    }
+
+
+    .contributor-role {
+
+      font-size: 10px;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      color: #777;
+
+      margin-bottom: 12px;
+    }
+
+
+    .contributor-name {
+
+      font-size: 19px;
+
+      color: white;
+    }
+
+
+    /* ==================================================
+       ACTORS
+       ================================================== */
+
+    .actors {
+
+      background: #0b0b0b;
+    }
+
+
+    .actors-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(190px, 1fr)
+        );
+
+      gap:
+        45px
+        25px;
+    }
+
+
+    .actor {
+
+      text-align: center;
+
+      min-width: 0;
+    }
+
+
+    .actor-photo {
+
+      width: 100%;
+
+      aspect-ratio: 3 / 4;
+
+      background: #181818;
+
+      overflow: hidden;
+
+      margin-bottom: 18px;
+
+      position: relative;
+    }
+
+
+    .actor-photo img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+    }
+
+
+    .actor-photo-placeholder {
+
+      width: 100%;
+
+      height: 100%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: #555;
+
+      font-size: 13px;
+
+      letter-spacing: 1px;
+    }
+
+
+    .actor-name {
+
+      font-size: 18px;
+
+      font-weight: bold;
+
+      margin-bottom: 7px;
+    }
+
+
+    .actor-role {
+
+      font-size: 13px;
+
+      color: #888;
+    }
+
+
+    /* ==================================================
+       MEMORIES
+       ================================================== */
+
+    .memories {
+
+      background: #151515;
+    }
+
+
+    .gallery-placeholder {
+
+      width: 100%;
+
+      min-height: 350px;
+
+      border:
+        1px dashed
+        #444;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      color: #777;
+
+      padding: 30px;
+    }
+
+
+    /* ==================================================
+       VIDEO
+       ================================================== */
+
+    .video-area {
+
+      margin-top: 35px;
+
+      aspect-ratio: 16 / 9;
+
+      background: #080808;
+
+      border:
+        1px dashed
+        #444;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: #666;
+
+      text-align: center;
+    }
+
+
+    /* ==================================================
+       BOOKING
+       ================================================== */
+
+    .booking-section {
+
+      text-align: center;
+
+      background: #0b0b0b;
+
+      padding:
+        130px
+        25px;
+    }
+
+
+    .booking-title {
+
+      font-size:
+        clamp(
+          40px,
+          6vw,
+          70px
+        );
+
+      margin:
+        0
+        0
+        20px;
+    }
+
+
+    .booking-text {
+
+      color: #999;
+
+      margin-bottom: 35px;
+    }
+
+
+    .booking-button {
+
+      display: inline-block;
+
+      padding:
+        17px
+        32px;
+
+      border:
+        1px solid
+        white;
+
+      font-size: 13px;
+
+      letter-spacing: 2px;
+
+      transition: 0.3s;
+    }
+
+
+    .booking-button:hover {
+
+      background: white;
+
+      color: black;
+    }
+
+
+    /* ==================================================
+       FOOTER
+       ================================================== */
+
+    .play-footer {
+
+      border-top:
+        1px solid
+        #222;
+
+      padding:
+        50px
+        7%;
+
+      background: #080808;
+
+      text-align: center;
+    }
+
+
+    .footer-logo {
+
+      max-width: 170px;
+
+      max-height: 80px;
+
+      object-fit: contain;
+
+      margin-bottom: 20px;
+    }
+
+
+    .footer-copy {
+
+      color: #666;
+
+      font-size: 12px;
+    }
+
+
+    /* ==================================================
+       TABLET
+       ================================================== */
+
+    @media (max-width: 900px) {
+
+      .play-hero-content {
+
+        padding-left: 6%;
+
+        padding-right: 6%;
+      }
+
+
+      .section {
+
+        padding:
+          90px
+          6%;
+      }
+
+
+      .actors-grid {
+
+        grid-template-columns:
+          repeat(
+            auto-fit,
+            minmax(170px, 1fr)
+          );
+      }
+
+    }
+
+
+    /* ==================================================
+       MOBILE
+       ================================================== */
+
+    @media (max-width: 600px) {
+
+      .play-hero {
+
+        min-height: 82vh;
+      }
+
+
+      .play-hero-bg {
+
+        background-position:
+          center center;
+      }
+
+
+      .play-hero-overlay {
+
+        background:
+          linear-gradient(
+            180deg,
+            rgba(0,0,0,0.30) 0%,
+            rgba(0,0,0,0.55) 45%,
+            rgba(0,0,0,0.94) 100%
+          );
+      }
+
+
+      .play-hero-content {
+
+        padding:
+          60px
+          22px
+          48px;
+      }
+
+
+      .back-link {
+
+        margin-bottom: 70px;
+
+        font-size: 12px;
+      }
+
+
+      .play-year {
+
+        font-size: 10px;
+
+        letter-spacing: 5px;
+
+        margin-bottom: 17px;
+      }
+
+
+      .play-title {
+
+        font-size: 51px;
+
+        line-height: 0.93;
+
+        letter-spacing: -2.5px;
+      }
+
+
+      .play-author {
+
+        font-size: 17px;
+
+        margin:
+          22px
+          0
+          28px;
+      }
+
+
+      .hero-button {
+
+        padding:
+          14px
+          18px;
+      }
+
+
+      .section {
+
+        padding:
+          75px
+          22px;
+      }
+
+
+      .section-title {
+
+        font-size: 43px;
+      }
+
+
+      .about-text {
+
+        font-size: 17px;
+
+        line-height: 1.75;
+      }
+
+
+      .contributors-grid {
+
+        grid-template-columns: 1fr;
+      }
+
+
+      .actors-grid {
+
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(0, 1fr)
+          );
+
+        gap:
+          30px
+          14px;
+      }
+
+
+      .actor-name {
+
+        font-size: 15px;
+      }
+
+
+      .actor-role {
+
+        font-size: 12px;
+      }
+
+
+      .booking-section {
+
+        padding:
+          90px
+          22px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ==================================================
+       HERO
+       ================================================== -->
+
+  <header class="play-hero">
+
+    <div class="play-hero-bg"></div>
+
+    <div class="play-hero-overlay"></div>
+
+    <div class="play-hero-content">
+
+
+      <a
+        href="../index.html"
+        class="back-link"
+      >
+        ← Όλες οι παραστάσεις
+      </a>
+
+
+      <div class="play-year">
+        2025
+      </div>
+
+
+      <h1 class="play-title">
+
+        Ο Μπαμπάς
+        <br>
+        ο Πόλεμος
+
+      </h1>
+
+
+      <p class="play-author">
+        του Ιάκωβου Καμπανέλλη
+      </p>
+
+
+      <a
+        href="#about"
+        class="hero-button"
+      >
+
+        ΔΕΙΤΕ ΤΗΝ ΠΑΡΑΣΤΑΣΗ
+
+        <span>↓</span>
+
+      </a>
+
+
+    </div>
+
+  </header>
+
+
+  <!-- ==================================================
+       ABOUT
+       ================================================== -->
+
+  <section
+    class="section about"
+    id="about"
+  >
+
+    <div class="section-inner">
+
+
+      <div class="section-label">
+        Η ΠΑΡΑΣΤΑΣΗ
+      </div>
+
+
+      <h2 class="section-title">
+        Λίγα λόγια για το έργο
+      </h2>
+
+
+      <div class="about-text">
+
+        <span class="about-placeholder">
+
+          Εδώ θα προστεθεί αργότερα
+          η παρουσίαση της παράστασης,
+          η υπόθεση του έργου και η
+          προσέγγιση της θεατρικής ομάδας.
+
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================================
+       CONTRIBUTORS
+       ================================================== -->
+
+  <section
+    class="section contributors"
+  >
+
+    <div class="section-inner">
+
+
+      <div class="section-label">
+        Η ΟΜΑΔΑ
+      </div>
+
+
+      <h2 class="section-title">
+        Συντελεστές της παράστασης
+      </h2>
+
+
+      <div class="contributors-grid">
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Σκηνοθεσία
+          </div>
+
+          <div class="contributor-name">
+            Όνομα σκηνοθέτη
+          </div>
+
+        </div>
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Οργάνωση &amp; Συντονισμός
+          </div>
+
+          <div class="contributor-name">
+            Όνομα / Ονόματα 
+          </div>
+
+        </div>
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Τεχνική Υποστήριξη (Ήχος/Φώτα)
+          </div>
+
+          <div class="contributor-name">
+            Όνομα / Ομάδα
+          </div>
+
+        </div>
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Καλλιτεχνική Επιμέλεια (Σκηνικά/Κοστούμια)
+          </div>
+
+          <div class="contributor-name">
+            Όνομα / Ομάδα
+          </div>
+
+        </div>
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Σχεδιασμός &amp; Ανάπτυξη Ιστοσελίδας
+          </div>
+
+          <div class="contributor-name">
+            Όνομα / Ομάδα
+          </div>
+
+        </div>
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Αφίσα &amp; Επικοινωνία
+          </div>
+
+          <div class="contributor-name">
+            Όνομα / Ομάδα
+          </div>
+
+        </div>
+
+
+        <div class="contributor">
+
+          <div class="contributor-role">
+            Ειδικές ευχαριστίες
+          </div>
+
+          <div class="contributor-name">
+            Ονόματα γονέων, συλλόγων ή άλλων καθηγητών που βοήθησαν
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================================
+       ACTORS
+       ================================================== -->
+
+  <section
+    class="section actors"
+  >
+
+    <div class="section-inner">
+
+
+      <div class="section-label">
+        Ο ΘΙΑΣΟΣ
+      </div>
+
+
+      <h2 class="section-title">
+        Οι ηθοποιοί μας
+      </h2>
+
+
+      <div class="actors-grid">
+
+
+        <div class="actor">
+
+          <div class="actor-photo">
+
+            <div class="actor-photo-placeholder">
+              ΦΩΤΟΓΡΑΦΙΑ
+            </div>
+
+          </div>
+
+          <div class="actor-name">
+            Όνομα ηθοποιού
+          </div>
+
+          <div class="actor-role">
+            Ρόλος
+          </div>
+
+        </div>
+
+
+        <div class="actor">
+
+          <div class="actor-photo">
+
+            <div class="actor-photo-placeholder">
+              ΦΩΤΟΓΡΑΦΙΑ
+            </div>
+
+          </div>
+
+          <div class="actor-name">
+            Όνομα ηθοποιού
+          </div>
+
+          <div class="actor-role">
+            Ρόλος
+          </div>
+
+        </div>
+
+
+        <div class="actor">
+
+          <div class="actor-photo">
+
+            <div class="actor-photo-placeholder">
+              ΦΩΤΟΓΡΑΦΙΑ
+            </div>
+
+          </div>
+
+          <div class="actor-name">
+            Όνομα ηθοποιού
+          </div>
+
+          <div class="actor-role">
+            Ρόλος
+          </div>
+
+        </div>
+
+
+        <div class="actor">
+
+          <div class="actor-photo">
+
+            <div class="actor-photo-placeholder">
+              ΦΩΤΟΓΡΑΦΙΑ
+            </div>
+
+          </div>
+
+          <div class="actor-name">
+            Όνομα ηθοποιού
+          </div>
+
+          <div class="actor-role">
+            Ρόλος
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================================
+       MEMORIES
+       ================================================== -->
+
+  <section
+    class="section memories"
+  >
+
+    <div class="section-inner">
+
+
+      <div class="section-label">
+        ΑΝΑΜΝΗΣΕΙΣ
+      </div>
+
+
+      <h2 class="section-title">
+        Από την παράσταση
+      </h2>
+
+
+      <div class="gallery-placeholder">
+
+        Εδώ θα τοποθετηθεί αργότερα
+        το carousel φωτογραφιών.
+
+      </div>
+
+
+      <div class="video-area">
+
+        Εδώ θα τοποθετηθεί αργότερα
+        το βίντεο της παράστασης.
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       FOOTER
+       ================================================== -->
+
+  <footer class="play-footer">
+
+
+    <img
+      src="../images/logo.png"
+      alt="Λογότυπο"
+      class="footer-logo"
+    >
+
+
+    <div class="footer-copy">
+
+      © 2026 · Θεατρική Ομάδα
+
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>
