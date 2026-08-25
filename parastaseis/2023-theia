@@ -8,7 +8,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>Ο Επιθεωρητής | 2024</title>
+  <title>Η Θεία από το Σικάγο | 2023</title>
 
   <link rel="stylesheet"
         href="../style.css">
@@ -63,7 +63,7 @@
       inset: 0;
 
       background-image:
-        url("../images/2024.jpg");
+        url("../images/2023-theia.jpg");
 
       background-size: cover;
 
@@ -902,20 +902,19 @@
 
 
       <div class="play-year">
-        2024
+        2023
       </div>
 
 
       <h1 class="play-title">
 
-        Ο Επιθεωρητής
+        Η Θεία από
+        <br>
+        το Σικάγο
 
       </h1>
 
 
-      <p class="play-author">
-        του Nicolai Gogol
-      </p>
 
 
       <a
