@@ -5,13 +5,17 @@
 
   <meta charset="UTF-8">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Το ημέρωμα της στρίγγλας | 2026</title>
 
-  <link rel="stylesheet"
-        href="../style.css">
+  <link
+    rel="stylesheet"
+    href="../style.css"
+  >
 
   <style>
 
@@ -346,105 +350,29 @@
 
 
     /* ==================================================
-       CONTRIBUTORS
-       ================================================== */
-
-    .contributors {
-
-      background: #151515;
-    }
-
-
-    .contributors-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(250px, 1fr)
-        );
-
-      gap: 1px;
-
-      background: #303030;
-    }
-
-
-    .contributor {
-
-      background: #151515;
-
-      padding: 32px;
-
-      min-height: 130px;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: center;
-
-      transition:
-        background 0.3s;
-    }
-
-
-    .contributor:hover {
-
-      background: #1c1c1c;
-    }
-
-
-    .contributor-role {
-
-      font-size: 10px;
-
-      letter-spacing: 3px;
-
-      text-transform: uppercase;
-
-      color: #777;
-
-      margin-bottom: 12px;
-    }
-
-
-    .contributor-name {
-
-      font-size: 19px;
-
-      color: white;
-    }
-
-
-    /* ==================================================
-       ACTORS
+       ΘΙΑΣΟΣ
        ================================================== */
 
     .actors {
 
-      background: #0b0b0b;
+      background: #151515;
     }
 
 
-    .actors-grid {
+    .actors-preview {
 
       display: grid;
 
       grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(190px, 1fr)
-        );
+        repeat(4, minmax(0, 1fr));
 
-      gap:
-        45px
-        25px;
+      gap: 25px;
+
+      margin-bottom: 55px;
     }
 
 
-    .actor {
+    .actor-preview {
 
       text-align: center;
 
@@ -458,25 +386,13 @@
 
       aspect-ratio: 3 / 4;
 
-      background: #181818;
+      background: #1d1d1d;
 
       overflow: hidden;
 
       margin-bottom: 18px;
 
       position: relative;
-    }
-
-
-    .actor-photo img {
-
-      width: 100%;
-
-      height: 100%;
-
-      object-fit: cover;
-
-      display: block;
     }
 
 
@@ -519,12 +435,93 @@
 
 
     /* ==================================================
+       ΚΟΥΜΠΙ ΟΛΟΥ ΤΟΥ ΘΙΑΣΟΥ
+       ================================================== */
+
+    .full-cast-button-wrapper {
+
+      display: flex;
+
+      justify-content: center;
+
+      width: 100%;
+    }
+
+
+    .full-cast-button {
+
+      width: 100%;
+
+      max-width: 650px;
+
+      padding:
+        22px
+        28px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.65);
+
+      background: transparent;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      font-size: 13px;
+
+      font-weight: bold;
+
+      letter-spacing: 1.5px;
+
+      transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+
+    .full-cast-button .cast-arrow {
+
+      font-size: 22px;
+
+      line-height: 1;
+
+      transition:
+        transform 0.3s ease;
+    }
+
+
+    .full-cast-button:hover {
+
+      background: #ffffff;
+
+      color: #000000;
+
+      border-color: #ffffff;
+
+      transform: translateY(-3px);
+    }
+
+
+    .full-cast-button:hover .cast-arrow {
+
+      transform: translateX(6px);
+    }
+
+
+    /* ==================================================
        MEMORIES
        ================================================== */
 
     .memories {
 
-      background: #151515;
+      background: #0b0b0b;
     }
 
 
@@ -588,7 +585,7 @@
 
       text-align: center;
 
-      background: #0b0b0b;
+      background: #151515;
 
       padding:
         130px
@@ -710,13 +707,12 @@
       }
 
 
-      .actors-grid {
+      .actors-preview {
 
         grid-template-columns:
-          repeat(
-            auto-fit,
-            minmax(170px, 1fr)
-          );
+          repeat(2, minmax(0, 1fr));
+
+        gap: 30px 18px;
       }
 
     }
@@ -820,6 +816,8 @@
       .section-title {
 
         font-size: 43px;
+
+        margin-bottom: 35px;
       }
 
 
@@ -831,23 +829,20 @@
       }
 
 
-      .contributors-grid {
+      /* ----------------------------------------------
+         ΘΙΑΣΟΣ ΣΤΟ ΚΙΝΗΤΟ
+         ---------------------------------------------- */
 
-        grid-template-columns: 1fr;
-      }
-
-
-      .actors-grid {
+      .actors-preview {
 
         grid-template-columns:
-          repeat(
-            2,
-            minmax(0, 1fr)
-          );
+          repeat(2, minmax(0, 1fr));
 
         gap:
           30px
           14px;
+
+        margin-bottom: 40px;
       }
 
 
@@ -863,11 +858,61 @@
       }
 
 
+      .full-cast-button {
+
+        padding:
+          18px
+          18px;
+
+        font-size: 10px;
+
+        letter-spacing: 1px;
+      }
+
+
+      .full-cast-button .cast-arrow {
+
+        font-size: 19px;
+      }
+
+
       .booking-section {
 
         padding:
           90px
           22px;
+      }
+
+    }
+
+
+    /* ==================================================
+       ΠΟΛΥ ΜΙΚΡΑ ΚΙΝΗΤΑ
+       ================================================== */
+
+    @media (max-width: 380px) {
+
+      .play-title {
+
+        font-size: 46px;
+      }
+
+
+      .actors-preview {
+
+        gap:
+          25px
+          10px;
+      }
+
+
+      .full-cast-button {
+
+        padding:
+          16px
+          14px;
+
+        font-size: 9px;
       }
 
     }
@@ -937,6 +982,7 @@
   </header>
 
 
+
   <!-- ==================================================
        ABOUT
        ================================================== -->
@@ -978,134 +1024,14 @@
   </section>
 
 
-  <!-- ==================================================
-       CONTRIBUTORS
-       ================================================== -->
-
-  <section
-    class="section contributors"
-  >
-
-    <div class="section-inner">
-
-
-      <div class="section-label">
-        Η ΟΜΑΔΑ
-      </div>
-
-
-      <h2 class="section-title">
-        Συντελεστές της παράστασης
-      </h2>
-
-
-      <div class="contributors-grid">
-
-
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Σκηνοθεσία
-          </div>
-
-          <div class="contributor-name">
-            Όνομα σκηνοθέτη
-          </div>
-
-        </div>
-
-
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Οργάνωση &amp; Συντονισμός
-          </div>
-
-          <div class="contributor-name">
-            Όνομα / Ονόματα 
-          </div>
-
-        </div>
-
-
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Τεχνική Υποστήριξη (Ήχος/Φώτα)
-          </div>
-
-          <div class="contributor-name">
-            Όνομα / Ομάδα
-          </div>
-
-        </div>
-
-
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Καλλιτεχνική Επιμέλεια (Σκηνικά/Κοστούμια)
-          </div>
-
-          <div class="contributor-name">
-            Όνομα / Ομάδα
-          </div>
-
-        </div>
-
-
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Σχεδιασμός &amp; Ανάπτυξη Ιστοσελίδας
-          </div>
-
-          <div class="contributor-name">
-            Όνομα / Ομάδα
-          </div>
-
-        </div>
-
-
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Αφίσα &amp; Επικοινωνία
-          </div>
-
-          <div class="contributor-name">
-            Όνομα / Ομάδα
-          </div>
-
-        </div>
-
-
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Ειδικές ευχαριστίες
-          </div>
-
-          <div class="contributor-name">
-            Ονόματα γονέων, συλλόγων ή άλλων καθηγητών που βοήθησαν
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
 
   <!-- ==================================================
-       ACTORS
+       ΘΙΑΣΟΣ
        ================================================== -->
 
   <section
     class="section actors"
+    id="actors"
   >
 
     <div class="section-inner">
@@ -1121,31 +1047,15 @@
       </h2>
 
 
-      <div class="actors-grid">
+      <!--
+        Εδώ δείχνουμε μόνο λίγους ηθοποιούς
+        ως προεπισκόπηση.
+      -->
+
+      <div class="actors-preview">
 
 
-        <div class="actor">
-
-          <div class="actor-photo">
-
-            <div class="actor-photo-placeholder">
-              ΦΩΤΟΓΡΑΦΙΑ
-            </div>
-
-          </div>
-
-          <div class="actor-name">
-            Όνομα ηθοποιού
-          </div>
-
-          <div class="actor-role">
-            Ρόλος
-          </div>
-
-        </div>
-
-
-        <div class="actor">
+        <div class="actor-preview">
 
           <div class="actor-photo">
 
@@ -1166,7 +1076,8 @@
         </div>
 
 
-        <div class="actor">
+
+        <div class="actor-preview">
 
           <div class="actor-photo">
 
@@ -1187,7 +1098,30 @@
         </div>
 
 
-        <div class="actor">
+
+        <div class="actor-preview">
+
+          <div class="actor-photo">
+
+            <div class="actor-photo-placeholder">
+              ΦΩΤΟΓΡΑΦΙΑ
+            </div>
+
+          </div>
+
+          <div class="actor-name">
+            Όνομα ηθοποιού
+          </div>
+
+          <div class="actor-role">
+            Ρόλος
+          </div>
+
+        </div>
+
+
+
+        <div class="actor-preview">
 
           <div class="actor-photo">
 
@@ -1210,9 +1144,36 @@
 
       </div>
 
+
+
+      <!-- ==================================================
+           ΚΟΥΜΠΙ ΓΙΑ ΟΛΟ ΤΟΝ ΘΙΑΣΟ
+           ================================================== -->
+
+      <div class="full-cast-button-wrapper">
+
+        <a
+          href="thiasos-2026.html"
+          class="full-cast-button"
+        >
+
+          <span>
+            ΔΕΙΤΕ ΟΛΟ ΤΟΝ ΘΙΑΣΟ (25 ΑΤΟΜΑ)
+          </span>
+
+          <span class="cast-arrow">
+            →
+          </span>
+
+        </a>
+
+      </div>
+
+
     </div>
 
   </section>
+
 
 
   <!-- ==================================================
