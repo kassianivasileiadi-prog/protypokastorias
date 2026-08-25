@@ -81,9 +81,7 @@
 
 
     .play-hero:hover .play-hero-bg {
-
       transform: scale(1.05);
-
     }
 
 
@@ -165,7 +163,6 @@
       color: #ffffff;
 
       transform: translateX(-4px);
-
     }
 
 
@@ -216,7 +213,7 @@
 
 
     /* ==================================================
-       ΚΟΥΜΠΙ HERO
+       HERO BUTTON
        ================================================== */
 
     .hero-button {
@@ -353,116 +350,31 @@
        ΘΙΑΣΟΣ
        ================================================== */
 
-    .actors {
+    .cast-section {
 
       background: #151515;
-    }
-
-
-    .actors-preview {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
-      gap: 25px;
-
-      margin-bottom: 55px;
-    }
-
-
-    .actor-preview {
-
-      text-align: center;
-
-      min-width: 0;
-    }
-
-
-    .actor-photo {
-
-      width: 100%;
-
-      aspect-ratio: 3 / 4;
-
-      background: #1d1d1d;
-
-      overflow: hidden;
-
-      margin-bottom: 18px;
 
       position: relative;
+
+      overflow: hidden;
     }
 
 
-    .actor-photo-placeholder {
+    .cast-box {
 
       width: 100%;
 
-      height: 100%;
+      max-width: 1050px;
 
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      color: #555;
-
-      font-size: 13px;
-
-      letter-spacing: 1px;
-    }
-
-
-    .actor-name {
-
-      font-size: 18px;
-
-      font-weight: bold;
-
-      margin-bottom: 7px;
-    }
-
-
-    .actor-role {
-
-      font-size: 13px;
-
-      color: #888;
-    }
-
-
-    /* ==================================================
-       ΚΟΥΜΠΙ ΟΛΟΥ ΤΟΥ ΘΙΑΣΟΥ
-       ================================================== */
-
-    .full-cast-button-wrapper {
-
-      display: flex;
-
-      justify-content: center;
-
-      width: 100%;
-    }
-
-
-    .full-cast-button {
-
-      width: 100%;
-
-      max-width: 650px;
+      margin: auto;
 
       padding:
-        22px
-        28px;
+        55px
+        60px;
 
       border:
         1px solid
-        rgba(255,255,255,0.65);
-
-      background: transparent;
+        rgba(255,255,255,0.12);
 
       display: flex;
 
@@ -470,25 +382,137 @@
 
       justify-content: space-between;
 
-      gap: 20px;
+      gap: 50px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,0.035),
+          rgba(255,255,255,0.01)
+        );
+
+      transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+    }
+
+
+    .cast-box:hover {
+
+      border-color:
+        rgba(255,255,255,0.35);
+
+      transform:
+        translateY(-4px);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,0.055),
+          rgba(255,255,255,0.015)
+        );
+    }
+
+
+    .cast-text {
+
+      max-width: 650px;
+    }
+
+
+    .cast-small-title {
+
+      font-size: 11px;
+
+      letter-spacing: 4px;
+
+      color: #888;
+
+      margin-bottom: 15px;
+    }
+
+
+    .cast-main-title {
+
+      font-size:
+        clamp(
+          32px,
+          4vw,
+          52px
+        );
+
+      line-height: 1;
+
+      margin-bottom: 18px;
+    }
+
+
+    .cast-description {
+
+      margin: 0;
+
+      color: #999;
+
+      font-size: 16px;
+
+      line-height: 1.7;
+
+      max-width: 600px;
+    }
+
+
+    .cast-number {
+
+      display: block;
+
+      margin-top: 18px;
+
+      color: #ffffff;
 
       font-size: 13px;
 
+      letter-spacing: 2px;
+
       font-weight: bold;
+    }
+
+
+    .cast-link {
+
+      flex-shrink: 0;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 20px;
+
+      padding:
+        16px
+        22px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.55);
+
+      font-size: 11px;
 
       letter-spacing: 1.5px;
+
+      font-weight: bold;
 
       transition:
         background 0.3s ease,
         color 0.3s ease,
-        transform 0.3s ease,
-        border-color 0.3s ease;
+        border-color 0.3s ease,
+        transform 0.3s ease;
     }
 
 
-    .full-cast-button .cast-arrow {
+    .cast-link-arrow {
 
-      font-size: 22px;
+      font-size: 19px;
 
       line-height: 1;
 
@@ -497,7 +521,7 @@
     }
 
 
-    .full-cast-button:hover {
+    .cast-link:hover {
 
       background: #ffffff;
 
@@ -505,13 +529,15 @@
 
       border-color: #ffffff;
 
-      transform: translateY(-3px);
+      transform:
+        translateY(-2px);
     }
 
 
-    .full-cast-button:hover .cast-arrow {
+    .cast-link:hover .cast-link-arrow {
 
-      transform: translateX(6px);
+      transform:
+        translateX(5px);
     }
 
 
@@ -578,74 +604,6 @@
 
 
     /* ==================================================
-       BOOKING
-       ================================================== */
-
-    .booking-section {
-
-      text-align: center;
-
-      background: #151515;
-
-      padding:
-        130px
-        25px;
-    }
-
-
-    .booking-title {
-
-      font-size:
-        clamp(
-          40px,
-          6vw,
-          70px
-        );
-
-      margin:
-        0
-        0
-        20px;
-    }
-
-
-    .booking-text {
-
-      color: #999;
-
-      margin-bottom: 35px;
-    }
-
-
-    .booking-button {
-
-      display: inline-block;
-
-      padding:
-        17px
-        32px;
-
-      border:
-        1px solid
-        white;
-
-      font-size: 13px;
-
-      letter-spacing: 2px;
-
-      transition: 0.3s;
-    }
-
-
-    .booking-button:hover {
-
-      background: white;
-
-      color: black;
-    }
-
-
-    /* ==================================================
        FOOTER
        ================================================== */
 
@@ -707,12 +665,13 @@
       }
 
 
-      .actors-preview {
+      .cast-box {
 
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
+        padding:
+          45px
+          40px;
 
-        gap: 30px 18px;
+        gap: 35px;
       }
 
     }
@@ -830,56 +789,101 @@
 
 
       /* ----------------------------------------------
-         ΘΙΑΣΟΣ ΣΤΟ ΚΙΝΗΤΟ
+         ΘΙΑΣΟΣ MOBILE
          ---------------------------------------------- */
 
-      .actors-preview {
-
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
-
-        gap:
-          30px
-          14px;
-
-        margin-bottom: 40px;
-      }
-
-
-      .actor-name {
-
-        font-size: 15px;
-      }
-
-
-      .actor-role {
-
-        font-size: 12px;
-      }
-
-
-      .full-cast-button {
+      .cast-box {
 
         padding:
-          18px
-          18px;
+          35px
+          25px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 28px;
+      }
+
+
+      .cast-small-title {
 
         font-size: 10px;
 
-        letter-spacing: 1px;
+        letter-spacing: 3px;
       }
 
 
-      .full-cast-button .cast-arrow {
+      .cast-main-title {
 
-        font-size: 19px;
+        font-size: 36px;
+
+        line-height: 1;
       }
 
 
-      .booking-section {
+      .cast-description {
+
+        font-size: 15px;
+
+        line-height: 1.65;
+      }
+
+
+      .cast-number {
+
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+      }
+
+
+      .cast-link {
+
+        width: 100%;
+
+        justify-content: space-between;
 
         padding:
-          90px
+          15px
+          17px;
+
+        font-size: 10px;
+      }
+
+
+      /* ----------------------------------------------
+         MEMORIES
+         ---------------------------------------------- */
+
+      .gallery-placeholder {
+
+        min-height: 280px;
+
+        padding: 20px;
+
+        font-size: 14px;
+      }
+
+
+      .video-area {
+
+        margin-top: 25px;
+
+        font-size: 14px;
+      }
+
+
+      /* ----------------------------------------------
+         FOOTER
+         ---------------------------------------------- */
+
+      .play-footer {
+
+        padding:
+          40px
           22px;
       }
 
@@ -898,21 +902,27 @@
       }
 
 
-      .actors-preview {
+      .cast-box {
 
-        gap:
-          25px
-          10px;
+        padding:
+          30px
+          20px;
       }
 
 
-      .full-cast-button {
+      .cast-main-title {
 
-        padding:
-          16px
-          14px;
+        font-size: 32px;
+      }
+
+
+      .cast-link {
 
         font-size: 9px;
+
+        padding:
+          14px
+          14px;
       }
 
     }
@@ -1030,8 +1040,7 @@
        ================================================== -->
 
   <section
-    class="section actors"
-    id="actors"
+    class="section cast-section"
   >
 
     <div class="section-inner">
@@ -1042,37 +1051,51 @@
       </div>
 
 
-      <h2 class="section-title">
-        Οι ηθοποιοί μας
-      </h2>
+      <div class="cast-box">
 
 
-      <!--
-        Εδώ δείχνουμε μόνο λίγους ηθοποιούς
-        ως προεπισκόπηση.
-      -->
+        <div class="cast-text">
 
-      
-      <!-- ==================================================
-           ΚΟΥΜΠΙ ΓΙΑ ΟΛΟ ΤΟΝ ΘΙΑΣΟ
-           ================================================== -->
+          <div class="cast-small-title">
+            2026 · ΤΟ ΗΜΕΡΩΜΑ ΤΗΣ ΣΤΡΙΓΓΛΑΣ
+          </div>
 
-      <div class="full-cast-button-wrapper">
+
+          <h2 class="cast-main-title">
+            Οι άνθρωποι<br>
+            πίσω από την παράσταση.
+          </h2>
+
+
+          <p class="cast-description">
+            Γνωρίστε τους μαθητές που
+            έδωσαν ζωή στους χαρακτήρες
+            της φετινής μας παράστασης.
+          </p>
+
+
+          <span class="cast-number">
+            25 ΗΘΟΠΟΙΟΙ
+          </span>
+
+        </div>
+
 
         <a
           href="thiasos-2026.html"
-          class="full-cast-button"
+          class="cast-link"
         >
 
           <span>
-            ΔΕΙΤΕ ΟΛΟ ΤΟΝ ΘΙΑΣΟ (25 ΑΤΟΜΑ)
+            ΓΝΩΡΙΣΤΕ ΤΟΝ ΘΙΑΣΟ
           </span>
 
-          <span class="cast-arrow">
+          <span class="cast-link-arrow">
             →
           </span>
 
         </a>
+
 
       </div>
 
