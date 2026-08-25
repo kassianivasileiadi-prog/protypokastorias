@@ -77,9 +77,7 @@
 
 
     .play-hero:hover .play-hero-bg {
-
       transform: scale(1.05);
-
     }
 
 
@@ -161,7 +159,6 @@
       color: #ffffff;
 
       transform: translateX(-4px);
-
     }
 
 
@@ -212,7 +209,7 @@
 
 
     /* ==================================================
-       ΚΟΥΜΠΙ HERO
+       HERO BUTTON
        ================================================== */
 
     .hero-button {
@@ -419,72 +416,21 @@
 
 
     /* ==================================================
-       ACTORS
+       ΘΙΑΣΟΣ - LINK CARD
        ================================================== */
 
-    .actors {
+    .cast-link-section {
 
       background: #0b0b0b;
+
+      padding:
+        90px 7%;
     }
 
 
-    .actors-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(190px, 1fr)
-        );
-
-      gap:
-        45px
-        25px;
-    }
-
-
-    .actor {
-
-      text-align: center;
-
-      min-width: 0;
-    }
-
-
-    .actor-photo {
-
-      width: 100%;
-
-      aspect-ratio: 3 / 4;
-
-      background: #181818;
-
-      overflow: hidden;
-
-      margin-bottom: 18px;
+    .cast-link {
 
       position: relative;
-    }
-
-
-    .actor-photo img {
-
-      width: 100%;
-
-      height: 100%;
-
-      object-fit: cover;
-
-      display: block;
-    }
-
-
-    .actor-photo-placeholder {
-
-      width: 100%;
-
-      height: 100%;
 
       display: flex;
 
@@ -492,29 +438,164 @@
 
       justify-content: center;
 
-      color: #555;
+      min-height: 360px;
 
-      font-size: 13px;
+      overflow: hidden;
 
-      letter-spacing: 1px;
+      background-image:
+        url("../images/2024.jpg");
+
+      background-size: cover;
+
+      background-position: center;
+
+      border: 1px solid #333;
+
+      transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
     }
 
 
-    .actor-name {
+    .cast-link::before {
 
-      font-size: 18px;
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.82),
+          rgba(0,0,0,0.55),
+          rgba(0,0,0,0.82)
+        );
+
+      transition:
+        background 0.4s ease;
+    }
+
+
+    .cast-link:hover {
+
+      transform: translateY(-5px);
+
+      border-color: #777;
+    }
+
+
+    .cast-link:hover::before {
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.72),
+          rgba(0,0,0,0.40),
+          rgba(0,0,0,0.72)
+        );
+    }
+
+
+    .cast-link-content {
+
+      position: relative;
+
+      z-index: 2;
+
+      text-align: center;
+
+      padding: 40px 25px;
+
+      max-width: 700px;
+    }
+
+
+    .cast-link-label {
+
+      font-size: 11px;
+
+      letter-spacing: 4px;
+
+      color: #bdbdbd;
+
+      margin-bottom: 18px;
+    }
+
+
+    .cast-link-title {
+
+      font-size:
+        clamp(
+          38px,
+          5vw,
+          62px
+        );
+
+      line-height: 1;
+
+      margin: 0 0 18px;
+
+      font-weight: 700;
+    }
+
+
+    .cast-link-text {
+
+      color: #d0d0d0;
+
+      font-size: 17px;
+
+      margin-bottom: 30px;
+    }
+
+
+    .cast-link-button {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 15px;
+
+      padding:
+        14px 22px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.8);
+
+      font-size: 11px;
 
       font-weight: bold;
 
-      margin-bottom: 7px;
+      letter-spacing: 2px;
+
+      transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
     }
 
 
-    .actor-role {
+    .cast-link-button span {
 
-      font-size: 13px;
+      font-size: 17px;
 
-      color: #888;
+      line-height: 0;
+    }
+
+
+    .cast-link:hover .cast-link-button {
+
+      background: white;
+
+      color: black;
+
+      transform: translateY(-2px);
     }
 
 
@@ -581,74 +662,6 @@
 
 
     /* ==================================================
-       BOOKING
-       ================================================== */
-
-    .booking-section {
-
-      text-align: center;
-
-      background: #0b0b0b;
-
-      padding:
-        130px
-        25px;
-    }
-
-
-    .booking-title {
-
-      font-size:
-        clamp(
-          40px,
-          6vw,
-          70px
-        );
-
-      margin:
-        0
-        0
-        20px;
-    }
-
-
-    .booking-text {
-
-      color: #999;
-
-      margin-bottom: 35px;
-    }
-
-
-    .booking-button {
-
-      display: inline-block;
-
-      padding:
-        17px
-        32px;
-
-      border:
-        1px solid
-        white;
-
-      font-size: 13px;
-
-      letter-spacing: 2px;
-
-      transition: 0.3s;
-    }
-
-
-    .booking-button:hover {
-
-      background: white;
-
-      color: black;
-    }
-
-
-    /* ==================================================
        FOOTER
        ================================================== */
 
@@ -705,18 +718,7 @@
       .section {
 
         padding:
-          90px
-          6%;
-      }
-
-
-      .actors-grid {
-
-        grid-template-columns:
-          repeat(
-            auto-fit,
-            minmax(170px, 1fr)
-          );
+          90px 6%;
       }
 
     }
@@ -795,25 +797,21 @@
         font-size: 17px;
 
         margin:
-          22px
-          0
-          28px;
+          22px 0 28px;
       }
 
 
       .hero-button {
 
         padding:
-          14px
-          18px;
+          14px 18px;
       }
 
 
       .section {
 
         padding:
-          75px
-          22px;
+          75px 22px;
       }
 
 
@@ -831,43 +829,67 @@
       }
 
 
-      .contributors-grid {
+      /* ΘΙΑΣΟΣ MOBILE */
 
-        grid-template-columns: 1fr;
+      .cast-link-section {
+
+        padding:
+          65px 22px;
       }
 
 
-      .actors-grid {
+      .cast-link {
 
-        grid-template-columns:
-          repeat(
-            2,
-            minmax(0, 1fr)
-          );
+        min-height: 390px;
 
-        gap:
-          30px
-          14px;
+        background-position: center;
       }
 
 
-      .actor-name {
+      .cast-link-content {
+
+        padding:
+          35px 20px;
+      }
+
+
+      .cast-link-label {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+      }
+
+
+      .cast-link-title {
+
+        font-size: 40px;
+
+        line-height: 0.98;
+      }
+
+
+      .cast-link-text {
 
         font-size: 15px;
+
+        line-height: 1.6;
       }
 
 
-      .actor-role {
+      .cast-link-button {
 
-        font-size: 12px;
+        padding:
+          13px 17px;
+
+        font-size: 10px;
       }
 
 
       .booking-section {
 
         padding:
-          90px
-          22px;
+          90px 22px;
       }
 
     }
@@ -902,7 +924,7 @@
 
 
       <div class="play-year">
-        2024
+        2026
       </div>
 
 
@@ -933,6 +955,7 @@
     </div>
 
   </header>
+
 
 
   <!-- ==================================================
@@ -976,241 +999,58 @@
   </section>
 
 
+
   <!-- ==================================================
-       CONTRIBUTORS
+       ΘΙΑΣΟΣ
        ================================================== -->
 
-  <section
-    class="section contributors"
-  >
+  <section class="cast-link-section">
 
     <div class="section-inner">
 
 
-      <div class="section-label">
-        Η ΟΜΑΔΑ
-      </div>
+      <a
+        href="2024-theasos.html"
+        class="cast-link"
+      >
+
+        <div class="cast-link-content">
 
 
-      <h2 class="section-title">
-        Συντελεστές της παράστασης
-      </h2>
-
-
-      <div class="contributors-grid">
-
-
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Σκηνοθεσία
+          <div class="cast-link-label">
+            Ο ΘΙΑΣΟΣ
           </div>
 
-          <div class="contributor-name">
-            Όνομα σκηνοθέτη
-          </div>
+
+          <h2 class="cast-link-title">
+            Γνωρίστε τον θίασο
+          </h2>
+
+
+          <p class="cast-link-text">
+            Ανακαλύψτε όλους τους ηθοποιούς
+            και τους ρόλους τους στην παράσταση.
+          </p>
+
+
+          <span class="cast-link-button">
+
+            ΔΕΙΤΕ ΟΛΟ ΤΟΝ ΘΙΑΣΟ
+
+            <span>→</span>
+
+          </span>
+
 
         </div>
 
+      </a>
 
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Οργάνωση &amp; Συντονισμός
-          </div>
-
-          <div class="contributor-name">
-            Όνομα / Ονόματα 
-          </div>
-
-        </div>
-
-
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Τεχνική Υποστήριξη (Ήχος/Φώτα)
-          </div>
-
-          <div class="contributor-name">
-            Όνομα / Ομάδα
-          </div>
-
-        </div>
-
-
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Καλλιτεχνική Επιμέλεια (Σκηνικά/Κοστούμια)
-          </div>
-
-          <div class="contributor-name">
-            Όνομα / Ομάδα
-          </div>
-
-        </div>
-
-
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Σχεδιασμός &amp; Ανάπτυξη Ιστοσελίδας
-          </div>
-
-          <div class="contributor-name">
-            Όνομα / Ομάδα
-          </div>
-
-        </div>
-
-
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Αφίσα &amp; Επικοινωνία
-          </div>
-
-          <div class="contributor-name">
-            Όνομα / Ομάδα
-          </div>
-
-        </div>
-
-
-        <div class="contributor">
-
-          <div class="contributor-role">
-            Ειδικές ευχαριστίες
-          </div>
-
-          <div class="contributor-name">
-            Ονόματα γονέων, συλλόγων ή άλλων καθηγητών που βοήθησαν
-          </div>
-
-        </div>
-
-
-      </div>
 
     </div>
 
   </section>
 
-
-  <!-- ==================================================
-       ACTORS
-       ================================================== -->
-
-  <section
-    class="section actors"
-  >
-
-    <div class="section-inner">
-
-
-      <div class="section-label">
-        Ο ΘΙΑΣΟΣ
-      </div>
-
-
-      <h2 class="section-title">
-        Οι ηθοποιοί μας
-      </h2>
-
-
-      <div class="actors-grid">
-
-
-        <div class="actor">
-
-          <div class="actor-photo">
-
-            <div class="actor-photo-placeholder">
-              ΦΩΤΟΓΡΑΦΙΑ
-            </div>
-
-          </div>
-
-          <div class="actor-name">
-            Όνομα ηθοποιού
-          </div>
-
-          <div class="actor-role">
-            Ρόλος
-          </div>
-
-        </div>
-
-
-        <div class="actor">
-
-          <div class="actor-photo">
-
-            <div class="actor-photo-placeholder">
-              ΦΩΤΟΓΡΑΦΙΑ
-            </div>
-
-          </div>
-
-          <div class="actor-name">
-            Όνομα ηθοποιού
-          </div>
-
-          <div class="actor-role">
-            Ρόλος
-          </div>
-
-        </div>
-
-
-        <div class="actor">
-
-          <div class="actor-photo">
-
-            <div class="actor-photo-placeholder">
-              ΦΩΤΟΓΡΑΦΙΑ
-            </div>
-
-          </div>
-
-          <div class="actor-name">
-            Όνομα ηθοποιού
-          </div>
-
-          <div class="actor-role">
-            Ρόλος
-          </div>
-
-        </div>
-
-
-        <div class="actor">
-
-          <div class="actor-photo">
-
-            <div class="actor-photo-placeholder">
-              ΦΩΤΟΓΡΑΦΙΑ
-            </div>
-
-          </div>
-
-          <div class="actor-name">
-            Όνομα ηθοποιού
-          </div>
-
-          <div class="actor-role">
-            Ρόλος
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
 
 
   <!-- ==================================================
