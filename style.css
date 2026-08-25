@@ -1,7 +1,4 @@
-/* =====================================================
-   ΒΑΣΙΚΑ
-   ===================================================== */
-
+```css
 * {
   margin: 0;
   padding: 0;
@@ -85,7 +82,6 @@ img {
 
 .nav-button {
   padding: 11px 19px;
-
   border: 1px solid white;
 
   font-size: 12px;
@@ -150,63 +146,47 @@ img {
 
 .hero-school {
   font-size: 12px;
-
   letter-spacing: 3px;
-
   margin-bottom: 20px;
 }
 
 .hero-label,
 .section-label {
   font-size: 11px;
-
   letter-spacing: 4px;
-
   color: #aaa;
-
   font-weight: bold;
-
   margin-bottom: 18px;
 }
 
 .hero h1 {
   font-size: clamp(50px, 8vw, 105px);
-
   line-height: 0.92;
-
   font-weight: 800;
-
   letter-spacing: -4px;
 }
 
 .hero-title {
   margin-top: 25px;
-
   font-size: 29px;
-
   font-weight: bold;
 }
 
 .hero-author {
   color: #ccc;
-
   font-size: 18px;
 }
 
 .hero-divider {
   width: 80px;
   height: 1px;
-
   background: white;
-
   margin: 25px 0;
 }
 
 .hero-details {
   display: flex;
-
   gap: 45px;
-
   margin-bottom: 35px;
 }
 
@@ -217,9 +197,7 @@ img {
 
 .hero-details span {
   font-size: 10px;
-
   letter-spacing: 2px;
-
   color: #999;
 }
 
@@ -237,7 +215,6 @@ img {
   color: #111;
 
   font-weight: bold;
-
   font-size: 13px;
 
   transition: 0.3s;
@@ -255,7 +232,6 @@ img {
   left: 50%;
 
   font-size: 24px;
-
   opacity: 0.6;
 }
 
@@ -270,28 +246,23 @@ img {
 
 .section-container {
   max-width: 1300px;
-
   margin: auto;
 }
 
 .section-heading {
   max-width: 700px;
-
   margin-bottom: 60px;
 }
 
 .section-heading h2,
 .section-intro h2 {
   font-size: clamp(40px, 5vw, 70px);
-
   line-height: 1;
-
   margin-bottom: 22px;
 }
 
 .section-heading p:not(.section-label) {
   color: #aaa;
-
   font-size: 17px;
 }
 
@@ -306,17 +277,13 @@ img {
 
 .about .section-container {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 90px;
-
   align-items: center;
 }
 
 .about-text {
   color: #bbb;
-
   font-size: 18px;
 }
 
@@ -335,10 +302,7 @@ img {
 
 .performance-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 50px;
 }
 
@@ -368,11 +332,6 @@ img {
 /* =====================================================
    ΑΦΙΣΑ
    ===================================================== */
-
-/*
-   Οι αφίσες είναι επίτηδες μικρότερες.
-   Δεν πιάνουν όλο το πλάτος της κάρτας.
-*/
 
 .poster-container {
   position: relative;
@@ -421,9 +380,7 @@ img {
   background: rgba(0,0,0,0.8);
 
   font-size: 11px;
-
   font-weight: bold;
-
   letter-spacing: 2px;
 }
 
@@ -438,25 +395,19 @@ img {
 
 .performance-year {
   font-size: 10px;
-
   letter-spacing: 3px;
-
   color: #888;
-
   margin-bottom: 8px;
 }
 
 .performance-info h3 {
   font-size: 24px;
-
   line-height: 1.15;
-
   margin-bottom: 10px;
 }
 
 .performance-author {
   color: #aaa;
-
   margin-bottom: 22px;
 }
 
@@ -464,9 +415,7 @@ img {
   display: inline-block;
 
   font-size: 11px;
-
   font-weight: bold;
-
   letter-spacing: 1px;
 
   padding-bottom: 5px;
@@ -491,7 +440,6 @@ img {
   min-height: 620px;
 
   display: flex;
-
   align-items: center;
 
   padding: 100px 8%;
@@ -501,7 +449,6 @@ img {
 
 .memories-background {
   position: absolute;
-
   inset: 0;
 
   background:
@@ -512,13 +459,11 @@ img {
     url("images/2025.jpg");
 
   background-size: cover;
-
   background-position: center;
 }
 
 .memories-overlay {
   position: absolute;
-
   inset: 0;
 
   background: rgba(0,0,0,0.2);
@@ -526,7 +471,6 @@ img {
 
 .memories-content {
   position: relative;
-
   z-index: 2;
 
   max-width: 650px;
@@ -550,7 +494,6 @@ img {
 
 .memory-buttons {
   display: flex;
-
   gap: 15px;
 }
 
@@ -560,7 +503,6 @@ img {
   border: 1px solid white;
 
   font-size: 12px;
-
   font-weight: bold;
 
   transition: 0.3s;
@@ -568,7 +510,6 @@ img {
 
 .memory-button:hover {
   background: white;
-
   color: #111;
 }
 
@@ -583,9 +524,7 @@ img {
 
 .map-box {
   width: 100%;
-
   height: 430px;
-
   background: #222;
 }
 
@@ -593,11 +532,9 @@ img {
   height: 100%;
 
   display: flex;
-
   flex-direction: column;
 
   align-items: center;
-
   justify-content: center;
 
   text-align: center;
@@ -607,15 +544,12 @@ img {
 
 .map-placeholder span {
   font-size: 45px;
-
   margin-bottom: 10px;
 }
 
 .map-placeholder h3 {
   color: white;
-
   font-size: 25px;
-
   margin-bottom: 5px;
 }
 
@@ -639,13 +573,11 @@ img {
     url("images/2027.jpg");
 
   background-size: cover;
-
   background-position: center;
 }
 
 .booking-content {
   position: relative;
-
   z-index: 2;
 
   max-width: 700px;
@@ -841,19 +773,12 @@ footer {
   }
 
 
-  /* Μία παράσταση ανά σειρά */
-
   .performance-grid {
     grid-template-columns: 1fr;
 
     gap: 35px;
   }
 
-
-  /*
-     Στο κινητό οι αφίσες
-     γίνονται λίγο μεγαλύτερες.
-  */
 
   .poster-container {
     width: 85%;
@@ -912,3 +837,4 @@ footer {
   }
 
 }
+```
