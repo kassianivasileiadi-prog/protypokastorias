@@ -699,7 +699,9 @@ img {
 
 .map-box {
   width: 100%;
+  max-width: 1000px;
   height: 450px;
+  margin: 40px auto 0;
   background: #222;
   overflow: hidden;
 }
@@ -711,6 +713,7 @@ img {
   display: block;
   pointer-events: auto;
 }
+
 /* =====================================================
    ΚΡΑΤΗΣΗ
    ===================================================== */
