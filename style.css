@@ -699,46 +699,17 @@ img {
 
 .map-box {
   width: 100%;
-
   height: 430px;
-
   background: #222;
-
   overflow: hidden;
 }
 
-.map-placeholder {
+.map-box iframe {
+  width: 100%;
   height: 100%;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
-
-  color: #aaa;
-
-  padding: 20px;
+  border: 0;
+  display: block;
 }
-
-.map-placeholder span {
-  font-size: 45px;
-
-  margin-bottom: 10px;
-}
-
-.map-placeholder h3 {
-  color: white;
-
-  font-size: 25px;
-
-  margin-bottom: 5px;
-}
-
 
 /* =====================================================
    ΚΡΑΤΗΣΗ
